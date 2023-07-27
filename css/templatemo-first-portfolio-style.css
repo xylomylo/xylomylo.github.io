@@ -11,9 +11,9 @@ https://templatemo.com/tm-578-first-portfolio
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #535da1;
-  --secondary-color:              #14B789;
+  --white-color:                  #f5f5f5;
+  --primary-color:                #458af1;
+  --secondary-color:              #1c55aa;
   --section-bg-color:             #f9f9f9;
   --dark-color:                   #000000;
   --p-color:                      #717275;
@@ -510,8 +510,8 @@ strong {
   width: 350px;
   height: 350px;
   position: absolute;
-  z-index: 22;
-  top: -50px;
+  z-index: 0;
+  top: 0;
   right: 0;
   left: 0;
   margin: auto;
