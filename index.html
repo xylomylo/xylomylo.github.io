@@ -26,7 +26,9 @@
             .profile-info p { margin-bottom: 0.5rem; color: #495057; }
             .profile-info a { color: #0d6efd; text-decoration: none; }
             .profile-info a:hover { text-decoration: underline; }
-            .social-links a { color: #495057; margin-right: 0.75rem; font-size: 1.25rem; }
+            .social-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+            @media (min-width: 768px) { .social-links { justify-content: flex-start; } }
+            .social-links a { color: #495057; font-size: 1.5rem; transition: color 0.2s; }
             .social-links a:hover { color: #0d6efd; }
             .main-content { padding: 2rem 0 4rem; }
             .section-title { font-size: 1.25rem; font-weight: 700; color: #212529; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #0d6efd; display: inline-block; }
@@ -36,10 +38,10 @@
             .research-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
             .research-item .meta { font-size: 0.875rem; color: #6c757d; margin-bottom: 0.5rem; }
             .research-item p { font-size: 0.9rem; color: #495057; margin-bottom: 0.75rem; }
-            .interests-list { list-style: none; padding: 0; }
-            .interests-list li { padding: 0.5rem 0; border-bottom: 1px solid #f1f3f5; color: #495057; }
+            .interests-list { list-style: none; padding: 0; margin: 0; }
+            .interests-list li { padding: 0.5rem 0; border-bottom: 1px solid #f1f3f5; color: #495057; display: flex; align-items: center; }
             .interests-list li:last-child { border-bottom: none; }
-            .interests-list i { color: #0d6efd; margin-right: 0.5rem; }
+            .interests-list i { color: #0d6efd; margin-right: 0.75rem; font-size: 1.1rem; width: 20px; text-align: center; }
             .minimal-footer { background-color: #f8f9fa; border-top: 1px solid #e9ecef; padding: 2rem 0; margin-top: 3rem; }
             .minimal-footer p { color: #6c757d; margin-bottom: 0; font-size: 0.875rem; }
             .divider { border-top: 1px solid #e9ecef; margin: 1.5rem 0; }
@@ -94,10 +96,10 @@
                             </div>
                             
                             <div class="social-links mt-3">
-                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" title="ResearchGate"><i class="bi-journal-text"></i></a>
-                                <a href="https://orcid.org/0009-0003-8339-7838" target="_blank" title="ORCID"><i class="bi-person-badge"></i></a>
-                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" title="LinkedIn"><i class="bi-linkedin"></i></a>
-                                <a href="https://github.com/xylomylo" target="_blank" title="GitHub"><i class="bi-github"></i></a>
+                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" title="ResearchGate"><i class="bi bi-journal-text"></i></a>
+                                <a href="https://orcid.org/0009-0003-8339-7838" target="_blank" title="ORCID"><i class="bi bi-person-badge"></i></a>
+                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/xylomylo" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -123,18 +125,18 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <ul class="interests-list">
-                                        <li><i class="bi-gear"></i> Dynamical Control Systems</li>
-                                        <li><i class="bi-robot"></i> Robotics & Autonomous Systems</li>
-                                        <li><i class="bi-camera-video"></i> Computer Vision</li>
-                                        <li><i class="bi-cpu"></i> Embedded Systems</li>
+                                        <li><i class="bi bi-gear"></i> Dynamical Control Systems</li>
+                                        <li><i class="bi bi-robot"></i> Robotics & Autonomous Systems</li>
+                                        <li><i class="bi bi-camera-video"></i> Computer Vision</li>
+                                        <li><i class="bi bi-cpu"></i> Embedded Systems</li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="interests-list">
-                                        <li><i class="bi-rocket-takeoff"></i> Spacecraft Engineering</li>
-                                        <li><i class="bi-diagram-3"></i> State Estimation & Sensor Fusion</li>
-                                        <li><i class="bi-heart-pulse"></i> Biomedical Engineering</li>
-                                        <li><i class="bi-motherboard"></i> VLSI Design</li>
+                                        <li><i class="bi bi-rocket-takeoff"></i> Spacecraft Engineering</li>
+                                        <li><i class="bi bi-diagram-3"></i> State Estimation & Sensor Fusion</li>
+                                        <li><i class="bi bi-heart-pulse"></i> Biomedical Engineering</li>
+                                        <li><i class="bi bi-motherboard"></i> VLSI Design</li>
                                     </ul>
                                 </div>
                             </div>
