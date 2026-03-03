@@ -7,285 +7,140 @@
         <meta name="author" content="Anan Faiyaz Radin">
         <title>Contact | Anan Faiyaz Radin</title>
         <link rel="icon" href="images/favicon.ico" type="images/x-icon" />
-        <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-icons.css" rel="stylesheet">
-        <link href="css/magnific-popup.css" rel="stylesheet">
-        <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+        <style>
+            body { background-color: #fff; }
+            .site-header { background-color: #f8f9fa; border-bottom: 1px solid #e9ecef; padding: 1rem 0; }
+            .site-header .navbar-brand { font-size: 1.5rem; font-weight: 700; color: #212529; }
+            .site-header .nav-link { color: #495057; font-weight: 500; padding: 0.5rem 1rem; }
+            .site-header .nav-link:hover, .site-header .nav-link.active { color: #0d6efd; }
+            .profile-sidebar { position: sticky; top: 2rem; }
+            .profile-photo { width: 100%; max-width: 200px; border-radius: 50%; margin-bottom: 1.5rem; }
+            .profile-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
+            .profile-title { color: #6c757d; margin-bottom: 1rem; }
+            .profile-info p { margin-bottom: 0.5rem; color: #495057; }
+            .profile-info a { color: #0d6efd; text-decoration: none; }
+            .profile-info a:hover { text-decoration: underline; }
+            .social-links a { color: #495057; margin-right: 0.75rem; font-size: 1.25rem; }
+            .social-links a:hover { color: #0d6efd; }
+            .main-content { padding: 2rem 0 4rem; }
+            .section-title { font-size: 1.25rem; font-weight: 700; color: #212529; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #0d6efd; display: inline-block; }
+            .contact-item { padding: 1.25rem; border: 1px solid #e9ecef; border-radius: 8px; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+            .contact-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+            .contact-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+            .contact-item p { font-size: 0.9rem; color: #495057; margin-bottom: 0.25rem; }
+            .contact-item a { color: #0d6efd; text-decoration: none; }
+            .contact-item a:hover { text-decoration: underline; }
+            .ref-item { padding: 1.25rem; border: 1px solid #e9ecef; border-radius: 8px; margin-bottom: 1rem; transition: box-shadow 0.2s; }
+            .ref-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+            .ref-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+            .ref-item .role { font-size: 0.9rem; color: #212529; margin-bottom: 0.25rem; }
+            .ref-item .meta { font-size: 0.875rem; color: #6c757d; margin-bottom: 0.5rem; }
+            .ref-item a { color: #0d6efd; text-decoration: none; }
+            .ref-item a:hover { text-decoration: underline; }
+            .minimal-footer { background-color: #f8f9fa; border-top: 1px solid #e9ecef; padding: 2rem 0; margin-top: 3rem; }
+            .minimal-footer p { color: #6c757d; margin-bottom: 0; font-size: 0.875rem; }
+            .divider { border-top: 1px solid #e9ecef; margin: 1.5rem 0; }
+            .social-btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #e9ecef; border-radius: 6px; margin-right: 0.5rem; margin-bottom: 0.5rem; color: #495057; text-decoration: none; font-size: 0.875rem; transition: all 0.2s; }
+            .social-btn:hover { border-color: #0d6efd; color: #0d6efd; }
+        </style>
     </head>
-    
     <body>
-
-        <section class="preloader">
-            <div class="spinner">
-                <span class="spinner-rotate"></span>    
-            </div>
-        </section>
-
-        <nav class="navbar navbar-expand-lg">
+        <header class="site-header">
             <div class="container">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <a href="index.html" class="navbar-brand mx-auto mx-lg-0">Anan Faiyaz Radin</a>
-
-                <div class="d-flex align-items-center d-lg-none">
-                    <i class="navbar-icon bi-envelope me-3"></i>
-                    <a class="custom-btn btn" href="contact.html">
-                        Contact
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="publications.html">Research</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="experience.html">Experience</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="cv.html">CV</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-
-                    <div class="d-lg-flex align-items-center d-none ms-auto">
-                        <i class="navbar-icon bi-envelope me-3"></i>
-                        <a class="custom-btn btn" href="mailto:anan.radin@northsouth.edu">
-                            Email Me
-                        </a>
+                <nav class="navbar navbar-expand-lg p-0">
+                    <a href="index.html" class="navbar-brand">Anan Faiyaz Radin</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="publications.html">Research</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        </ul>
                     </div>
-                </div>
-
+                </nav>
             </div>
-        </nav>
-
-        <main>
-
-            <section class="hero d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-7 col-12">
-                            <div class="hero-text">
-                                <div class="hero-title-wrap d-flex align-items-center mb-4">
-                                    <img src="images/anan3.jpg" class="avatar-image avatar-image-large img-fluid" alt="Anan Faiyaz Radin">
-
-                                    <h1 class="hero-title ms-3 mb-0">Contact</h1>
-                                </div>
-
-                                <h2 class="mb-4">Let's Connect</h2>
-                                <p class="mb-4">Feel free to reach out for research collaborations, academic inquiries, or general questions. I'm always open to discussing control systems, robotics, and aerospace engineering.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-12 position-relative">
-                            <div class="hero-image-wrap"></div>
-                            <img src="images/anan.png" class="hero-image img-fluid" alt="Contact">
-                        </div>
-
-                    </div>
-                </div>
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6f42c1" fill-opacity="1" d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,208C624,235,672,245,720,240C768,235,816,213,864,186.7C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path></svg>
-            </section>
-
-
-            <section class="contact section-padding" id="section_2">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-md-6 col-12 mb-5">
-                            <div class="contact-info">
-                                <h3 class="mb-4">Contact Information</h3>
-                                
-                                <div class="d-flex align-items-start mb-4">
-                                    <div class="contact-icon me-3">
-                                        <i class="bi-envelope-fill fs-4 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Email</h5>
-                                        <p class="mb-1"><a href="mailto:anan.radin@northsouth.edu">anan.radin@northsouth.edu</a> <small class="text-muted">(Academic)</small></p>
-                                        <p class="mb-0"><a href="mailto:ananfaiyazradin@gmail.com">ananfaiyazradin@gmail.com</a> <small class="text-muted">(Personal)</small></p>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-start mb-4">
-                                    <div class="contact-icon me-3">
-                                        <i class="bi-geo-alt-fill fs-4 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Current Location</h5>
-                                        <p class="mb-0">Nottingham, United Kingdom</p>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-start mb-4">
-                                    <div class="contact-icon me-3">
-                                        <i class="bi-building fs-4 text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">Affiliation</h5>
-                                        <p class="mb-1"><a href="https://www.nottingham.ac.uk/engineering/departments/eee/index.aspx" target="_blank">University of Nottingham</a></p>
-                                        <p class="mb-0 text-muted small">Department of Electrical & Electronic Engineering</p>
-                                    </div>
-                                </div>
-
-                                <hr class="my-4">
-
-                                <h5 class="mb-3">Connect on Social</h5>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/ananradin/" target="_blank" class="btn btn-outline-primary btn-sm me-2 mb-2">
-                                        <i class="bi-linkedin me-1"></i>LinkedIn
-                                    </a>
-                                    <a href="https://github.com/xylomylo" target="_blank" class="btn btn-outline-dark btn-sm me-2 mb-2">
-                                        <i class="bi-github me-1"></i>GitHub
-                                    </a>
-                                    <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" class="btn btn-outline-success btn-sm me-2 mb-2">
-                                        <i class="bi-mortarboard me-1"></i>ResearchGate
-                                    </a>
-                                    <a href="https://orcid.org/0009-0003-8339-7838" target="_blank" class="btn btn-outline-info btn-sm me-2 mb-2">
-                                        <i class="bi-person-badge me-1"></i>ORCID
-                                    </a>
-                                    <a href="https://www.youtube.com/@ananradin/videos" target="_blank" class="btn btn-outline-danger btn-sm me-2 mb-2">
-                                        <i class="bi-youtube me-1"></i>YouTube
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-12 mb-5">
-                            <div class="contact-form-wrap bg-white p-4 p-lg-5 rounded shadow-sm">
-                                <h3 class="mb-4">Send a Message</h3>
-                                <form action="#" method="post" class="contact-form" role="form">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12 mb-3">
-                                            <label for="contact-name" class="form-label">Name</label>
-                                            <input type="text" name="name" id="contact-name" class="form-control" placeholder="Your name" required>
-                                        </div>
-
-                                        <div class="col-lg-6 col-12 mb-3">
-                                            <label for="contact-email" class="form-label">Email</label>
-                                            <input type="email" name="email" id="contact-email" class="form-control" placeholder="your.email@example.com" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="contact-subject" class="form-label">Subject</label>
-                                        <input type="text" name="subject" id="contact-subject" class="form-control" placeholder="Subject of your message">
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <label for="contact-message" class="form-label">Message</label>
-                                        <textarea name="message" id="contact-message" class="form-control" rows="5" placeholder="Your message..." required></textarea>
-                                    </div>
-
-                                    <button type="submit" class="custom-btn btn">
-                                        <i class="bi-send me-2"></i>Send Message
-                                    </button>
-                                </form>
-                                <p class="text-muted small mt-3"><em>Note: This form is for display purposes. Please use email or LinkedIn to contact me directly.</em></p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="services section-padding" id="section_3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 mx-auto">
-                            <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
-                                <img src="images/anan3.jpg" class="avatar-image img-fluid" alt="">
-                                <h2 class="text-white ms-4 mb-0">References</h2>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <!-- Reference 1 -->
-                                <div class="col-lg-6 col-12 mb-4">
-                                    <div class="services-thumb">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Swarupa Haque</h3>
-                                        </div>
-                                        
-                                        <p><strong>Program Officer</strong></p>
-                                        <p class="text-muted">EMK Center, American Spaces<br>Excellence in English Programs</p>
-                                        <p><i class="bi-envelope me-2"></i><a href="mailto:swarupah@emkcenter.org">swarupah@emkcenter.org</a></p>
-
-                                        <div class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="services-icon bi-person-check"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Reference 2 -->
-                                <div class="col-lg-6 col-12 mb-4">
-                                    <div class="services-thumb services-thumb-up">
-                                        <div class="d-flex flex-wrap align-items-center border-bottom mb-4 pb-3">
-                                            <h3 class="mb-0">Dr. Shahnewaz Siddique</h3>
-                                        </div>
-                                        
-                                        <p><strong>Professor (Grade-1)</strong></p>
-                                        <p class="text-muted">Department of Electrical & Computer Engineering<br>North South University, Dhaka</p>
-                                        <p><i class="bi-envelope me-2"></i><a href="mailto:shahnewaz.siddique@northsouth.edu">shahnewaz.siddique@northsouth.edu</a></p>
-                                        <p><i class="bi-google me-2"></i><a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Google Scholar</a></p>
-
-                                        <div class="services-icon-wrap d-flex justify-content-center align-items-center">
-                                            <i class="services-icon bi-mortarboard"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
+        </header>
+        <main class="main-content">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-12">
-                        <div class="copyright-text-wrap">
-                            <p class="mb-0">
-                                <span class="copyright-text">Copyright © 2026 <a href="index.html">Anan Faiyaz Radin</a>. All rights reserved.</span>
-                                Design: <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
-                            </p>
+                    <div class="col-lg-3 col-md-4 mb-4">
+                        <div class="profile-sidebar text-center text-md-start">
+                            <img src="images/anan3.jpg" class="profile-photo img-fluid" alt="Anan Faiyaz Radin">
+                            <h1 class="profile-name">Anan Faiyaz Radin</h1>
+                            <p class="profile-title">MSc Computer Science (AI)</p>
+                            <div class="profile-info">
+                                <p><a href="mailto:psxar12@nottingham.ac.uk">psxar12@nottingham.ac.uk</a></p>
+                                <div class="divider"></div>
+                                <p>School of Computer Science</p>
+                                <p><a href="https://www.nottingham.ac.uk/" target="_blank">University of Nottingham</a></p>
+                                <div class="divider"></div>
+                            </div>
+                            <div class="social-links mt-3">
+                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" title="ResearchGate"><i class="bi-journal-text"></i></a>
+                                <a href="https://orcid.org/0009-0003-8339-7838" target="_blank" title="ORCID"><i class="bi-person-badge"></i></a>
+                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" title="LinkedIn"><i class="bi-linkedin"></i></a>
+                                <a href="https://github.com/xylomylo" target="_blank" title="GitHub"><i class="bi-github"></i></a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <section class="mb-5">
+                            <h2 class="section-title">Contact Information</h2>
+                            <div class="contact-item">
+                                <h4><i class="bi-envelope me-2 text-primary"></i>Email</h4>
+                                <p><a href="mailto:psxar12@nottingham.ac.uk">psxar12@nottingham.ac.uk</a> <small class="text-muted">(University)</small></p>
+                                <p><a href="mailto:ananfaiyazradin@gmail.com">ananfaiyazradin@gmail.com</a> <small class="text-muted">(Personal)</small></p>
+                            </div>
+                            <div class="contact-item">
+                                <h4><i class="bi-geo-alt me-2 text-primary"></i>Location</h4>
+                                <p>Nottingham, United Kingdom</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4><i class="bi-building me-2 text-primary"></i>Affiliation</h4>
+                                <p><a href="https://www.nottingham.ac.uk/computerscience/" target="_blank">School of Computer Science</a></p>
+                                <p>University of Nottingham</p>
+                            </div>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="section-title">Connect Online</h2>
+                            <div class="contact-item">
+                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" class="social-btn"><i class="bi-linkedin me-2"></i>LinkedIn</a>
+                                <a href="https://github.com/xylomylo" target="_blank" class="social-btn"><i class="bi-github me-2"></i>GitHub</a>
+                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" class="social-btn"><i class="bi-journal-text me-2"></i>ResearchGate</a>
+                                <a href="https://orcid.org/0009-0003-8339-7838" target="_blank" class="social-btn"><i class="bi-person-badge me-2"></i>ORCID</a>
+                                <a href="https://www.youtube.com/@ananradin/videos" target="_blank" class="social-btn"><i class="bi-youtube me-2"></i>YouTube</a>
+                            </div>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="section-title">References</h2>
+                            <div class="ref-item">
+                                <h4>Swarupa Haque</h4>
+                                <p class="role"><strong>Program Officer</strong></p>
+                                <p class="meta">EMK Center, American Spaces · Excellence in English Programs</p>
+                                <p><i class="bi-envelope me-2"></i><a href="mailto:swarupah@emkcenter.org">swarupah@emkcenter.org</a></p>
+                            </div>
+                            <div class="ref-item">
+                                <h4>Dr. Shahnewaz Siddique</h4>
+                                <p class="role"><strong>Professor (Grade-1)</strong></p>
+                                <p class="meta">Department of Electrical & Computer Engineering · North South University, Dhaka</p>
+                                <p><i class="bi-envelope me-2"></i><a href="mailto:shahnewaz.siddique@northsouth.edu">shahnewaz.siddique@northsouth.edu</a></p>
+                                <p><i class="bi-google me-2"></i><a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Google Scholar</a></p>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
-        </footer>
-
-        <!-- JAVASCRIPT FILES -->
+        </main>
+        <footer class="minimal-footer"><div class="container"><div class="row"><div class="col-12 text-center"><p>Copyright 2026 Anan Faiyaz Radin. All rights reserved.</p></div></div></div></footer>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/magnific-popup-options.js"></script>
-        <script src="js/custom.js"></script>
-
     </body>
 </html>
