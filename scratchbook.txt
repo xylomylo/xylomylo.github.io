@@ -1,0 +1,11 @@
+Give me a concise step-by-step guide covering two things:
+
+How to clone/copy an existing website to use as your own (using browser DevTools, "Save As", or wget), and prepare it for GitHub with git init, add, commit, and push commands.
+How to host a personal website on GitHub Pages, covering both:
+
+The username site method (repo named yourusername.github.io)
+The project site method (via Settings → Pages)
+
+
+
+Include the exact git commands needed, mention the index.html requirement, public repo requirement, and that the site goes live in 1–2 minutes. Format it with clear headers and code blocks.
