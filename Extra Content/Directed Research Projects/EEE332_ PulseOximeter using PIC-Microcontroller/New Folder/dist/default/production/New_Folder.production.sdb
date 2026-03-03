@@ -1,0 +1,77 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"18 C:\Users\Anan Faiyaz\Downloads\332 Project\New Folder\newmain.c
+[v _main main `(v  1 e 1 0 ]
+"28
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"36
+[v _cmd cmd `(v  1 e 1 0 ]
+"46
+[v _dat dat `(v  1 e 1 0 ]
+"56
+[v _show show `(v  1 e 1 0 ]
+"216 C:/Users/Anan Faiyaz/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"2708
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"2711
+[v _RC1 RC1 `VEb  1 e 0 @57 ]
+"2714
+[v _RC2 RC2 `VEb  1 e 0 @58 ]
+"2963
+[v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
+"2966
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"2969
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
+"8 C:\Users\Anan Faiyaz\Downloads\332 Project\New Folder\newmain.c
+[v _j j `i  1 e 2 0 ]
+"18
+[v _main main `(v  1 e 1 0 ]
+{
+"26
+} 0
+"56
+[v _show show `(v  1 e 1 0 ]
+{
+[v show@s s `*.24uc  1 a 1 wreg ]
+[v show@s s `*.24uc  1 a 1 wreg ]
+[v show@s s `*.24uc  1 a 1 1 ]
+"61
+} 0
+"46
+[v _dat dat `(v  1 e 1 0 ]
+{
+[v dat@b b `uc  1 a 1 wreg ]
+[v dat@b b `uc  1 a 1 wreg ]
+"48
+[v dat@b b `uc  1 a 1 0 ]
+"54
+} 0
+"28
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"34
+} 0
+"36
+[v _cmd cmd `(v  1 e 1 0 ]
+{
+[v cmd@a a `uc  1 a 1 wreg ]
+[v cmd@a a `uc  1 a 1 wreg ]
+"38
+[v cmd@a a `uc  1 a 1 0 ]
+"44
+} 0

@@ -1,0 +1,225 @@
+#include<xc.h>
+#define delay for(i=0;i<=1000;i++)
+#define rs RC0
+#define rw RC1
+#define e RC2
+#define INTERRUPT_GlobalInterruptEnable() (INTCONbits.GIE = 1)
+#define INTERRUPT_GlobalInterruptDisable() (INTCONbits.GIE = 0)
+#define INTERRUPT_PeripheralInterruptEnable() (INTCONbits.PEIE = 1)
+#define INTERRUPT_PeripheralInterruptDisable() (INTCONbits.PEIE = 0)
+#define TMR0_INTERRUPT_TICKER_FACTOR    1
+
+__CONFIG( FOSC_HS & WDTE_OFF & PWRTE_OFF & CP_OFF & BOREN_OFF & LVP_OFF & CPD_OFF & WRT_OFF & DEBUG_OFF);
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+#define _XTAL_FREQ 20000000
+
+/* Program Flow related definition*/
+#define READ_ADC  1
+#define CAL_HBEAT 2
+#define SHO_HBEAT 3
+#define IDLE 4
+#define DEFAULT 5
+volatile int state = 1;
+volatile unsigned long N = 0;
+volatile int rate[10]; // array to hold last ten IBI values
+volatile unsigned long sampleCounter = 0; // used to determine pulse timing
+volatile unsigned long lastBeatTime = 0; // used to find IBI
+volatile int P = 510; // used to find peak in pulse wave, seeded
+volatile int T = 510; // used to find trough in pulse wave, seeded
+volatile int thresh = 530; // used to find instant moment of heart beat, seeded
+volatile int amp =100; // used to hold amplitude of pulse waveform, seeded
+volatile bool firstBeat = true; // used to seed rate array so we startup with reasonable BPM
+volatile bool secondBeat = false; // used to seed rate array so we startup with reasonable BPM
+volatile int BPM; // int that holds raw Analog in AN4/RB5. updated every 2mS
+volatile int Signal; // holds the incoming raw data
+volatile int IBI = 300; // int that holds the time interval between beats! Must be seeded!
+volatile bool Pulse = false; // "True" when User's live heartbeat is detected. "False" when not a "live beat".
+volatile bool QS = false; // becomes true when finds a beat.
+
+const uint8_t tmr0_mask = 0xFF;
+//Pre-Declaring Most Functions
+void adc();
+
+void cmd(unsigned char a);
+void dat(unsigned char b);
+void show(unsigned char *s);int i;
+/*
+void TMR0_Initialize(void); 
+void TMR0_StartTimer(void); 
+void TMR0_StopTimer(void);
+void TMR0_ISR(void);
+void timer_isr(void); */
+
+void interrupt INTERRUPT_InterruptManager (void);
+unsigned int adcval;
+
+int tune = 1; //the conversion factor from program time to real time
+
+//Main Calculation Algorithm & Function
+void calculate_heart_beat(int adcval) {
+					   Signal = adcval;
+					   sampleCounter += 2; // keep track of the time in mS with this variable
+					   //N = 90000;//sampleCounter - lastBeatTime; // monitor the time since the last beat to avoid noise
+					   //  find the peak and trough of the pulse wave
+					   if (Signal < thresh ) //&& (N > (IBI / 5)*3)) { // avoid dichrotic noise by waiting 3/5 of last IBI
+								{
+								     if (Signal < T){ // T is the trough
+											  T = Signal; // keep track of lowest point in pulse wave-
+										      }
+								}
+
+					   if (Signal > thresh && Signal > P) { // thresh condition helps avoid noise
+										   P = Signal; // P is the peak
+									       } // keep track of highest point in pulse wave
+					   //  NOW IT'S TIME TO LOOK FOR THE HEART BEAT
+					   // signal surges up in value every time there is a pulse
+					   if (600 > 500) { // avoid high frequency noise
+							      if ((Signal > thresh) && (Pulse == false) )//&& (N > (IBI / 5)*3)) 
+													   {
+													       Pulse = true; // set the Pulse flag when we think there is a pulse
+													       IBI = (sampleCounter - lastBeatTime)*tune; // measure time between beats in mS /// tune is the conversion factor from program time to real time---------------------------------------------------------------------------------------------------
+													       lastBeatTime = sampleCounter; // keep track of time for next pulse
+													       if (secondBeat) { // if this is the second beat, if secondBeat == TRUE
+																  secondBeat = false; // clear secondBeat flag
+																  int i;
+																  for (i = 0; i <= 9; i++) { // seed the running total to get a realisitic BPM at startup
+																			       rate[i] = IBI;
+																			    }
+																}
+													       if (firstBeat) { // if it's the first time we found a beat, if firstBeat == TRUE
+																     firstBeat = false; // clear firstBeat flag
+																     secondBeat = true; // set the second beat flag
+																     //pulse_tmr_handle = bsp_harmony_start_tmr_cb_periodic(PULSE_CHECK_TIME_INTERVAL, 0, pulse_read_cb); // enable interrupts again
+																     return; // IBI value is unreliable so discard it
+																 }
+													       // keep a running total of the last 10 IBI values
+													       uint16_t runningTotal = 0; // clear the runningTotal variable
+													       int i;
+													       for (i = 0; i <= 8; i++) { // shift data in the rate array
+																	      rate[i] = rate[i + 1]; // and drop the oldest IBI value
+																	      runningTotal += rate[i]; // add up the 9 oldest IBI values
+																	  }
+													       rate[9] = IBI; // add the latest IBI to the rate array
+													       runningTotal += rate[9]; // add the latest IBI to runningTotal
+													       runningTotal /= 10; // average the last 10 IBI values
+													       BPM = 60000 / (runningTotal); // how many beats can fit into a minute? that's BPM!
+													       QS = true; // set Quantified Self flag
+														  // QS FLAG IS NOT CLEARED INSIDE THIS ISR
+													      }
+
+							  }
+					    if (Signal < thresh && Pulse == true) { // when the values are going down, the beat is over
+											 Pulse = false; // reset the Pulse flag so we can do it again
+											 amp = P - T; // get amplitude of the pulse wave
+											 //thresh = amp / 2 + T; // set thresh at 50% of the amplitude // set threshold to constant
+											 P =1000; // reset these for next time
+											 T = 100;
+										     }
+					    if (N > 2500)  { 
+								  // if 2.5 seconds go by without a beat
+								 thresh = 530; // set thresh default
+								 P =1000; // set P default
+								 T = 100; // set T default
+								 lastBeatTime = sampleCounter; // bring the lastBeatTime up to date
+								 firstBeat = true; // set these to avoid noise
+								 secondBeat = false; // when we get the heartbeat back
+							     }
+				       }
+
+void main(){
+		TRISB=TRISC0=TRISC1=TRISC2=0;          //Port B and Port C is Output (LCD)
+		TRISA0=1;               //RA0 is input (ADC)
+		//Init LCD Display
+		cmd(0x38);
+		cmd(0x0c);
+		cmd(0x06);
+		cmd(0x80);
+		//TMR0_Initialize();
+		//OPTION_REGbits.T0CS = 0;
+		//OPTION_REGbits.T0SE = 1;
+		//OPTION_REGbits.PSA = 0;            
+		//OPTION_REGbits.PS = 0x07;
+		//TMR0 = (uint8_t)(tmr0_mask & (256-(((2 *20000000)/(256*4))/1000)));     // delay for 2ms
+		// TimerCountMax - (((delay(ms) * Focs(hz)) / (PreScale_Val * 4)) / 1000)
+		//TMR0_StartTimer();
+		//INTCONbits.TMR0IF = 1;
+		//INTERRUPT_GlobalInterruptEnable(); //INTCONbits.GIE = 1;
+		//INTERRUPT_PeripheralInterruptEnable(); //INTCONbits.PEIE = 1;
+		while (1) {
+		    switch (state) {
+
+						   case READ_ADC:{ 		
+								      adc();							  
+								      state =2;                
+								      break;
+								  }
+						   case CAL_HBEAT:{
+										 calculate_heart_beat(adcval);
+										 state = 3;
+										 break;
+									      }
+						   case SHO_HBEAT:
+									{
+									    if (QS == true) { // A Heartbeat Was Found // BPM and IBI have been Determined
+			     
+											       QS = false; // reset the Quantified Self flag for next time
+											     show("BPM :");	 
+											     cmd(0x8C);
+											     //dat((/1000)+48);
+											     dat(((BPM/100)%10)+48);
+											     dat(((BPM/10)%10)+48);
+											     dat((BPM%10)+48);
+											     show(" ");
+											     cmd(0x80);
+											     }							    
+									  }
+									   state = 4;
+									   break;					  
+						     case IDLE:
+								 {           
+								  state = 1;  
+								   break;	  
+								 }
+						     default:
+							      {
+							      }
+				       }
+			}
+	    }
+void cmd(unsigned char a) {
+			       PORTB=a;
+			       rs=0;
+			       rw=0;
+			       e=1;
+			       delay;
+			       e=0;
+			   }
+			   
+void dat(unsigned char b) {
+			       PORTB=b;
+			       rs=1;
+			       rw=0;
+			       e=1;
+			       delay;
+			       e=0;
+			   }  
+			   
+void show(unsigned char *s) 
+			   {
+			       while(*s) {
+				   dat(*s++);
+			       }
+			   }
+			   
+void adc()	{	
+		   __delay_ms(2);
+		   ADCON1=0x80;                    //right justified
+		   ADCON0=0x05;                    //adc on, fosc/64
+		   while(GO_nDONE);                //wait until conversion is finished
+		   adcval=((ADRESH<<8)|(ADRESL));    //store the result 
+		}
