@@ -39,6 +39,11 @@
             .minimal-footer { background-color: #f8f9fa; border-top: 1px solid #e9ecef; padding: 2rem 0; margin-top: 3rem; }
             .minimal-footer p { color: #6c757d; margin-bottom: 0; font-size: 0.875rem; }
             .divider { border-top: 1px solid #e9ecef; margin: 1.5rem 0; }
+            .nav-tabs { border-bottom: 2px solid #e9ecef; margin-bottom: 1.5rem; }
+            .nav-tabs .nav-link { border: none; border-bottom: 2px solid transparent; color: #6c757d; font-weight: 500; padding: 0.75rem 1.25rem; margin-bottom: -2px; transition: all 0.2s; }
+            .nav-tabs .nav-link:hover { color: #0d6efd; border-color: transparent; }
+            .nav-tabs .nav-link.active { color: #0d6efd; border-bottom: 2px solid #0d6efd; background-color: transparent; }
+            .tab-content { padding-top: 0.5rem; }
         </style>
     </head>
     <body>
@@ -84,85 +89,91 @@
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-8">
-                        <section class="mb-5">
-                            <h2 class="section-title">Professional Experience</h2>
-                            <div class="exp-item">
-                                <h4>EMK Center, American Spaces</h4>
-                                <p class="role"><strong>STEM Content Translator</strong></p>
-                                <p class="meta">November 2023 – Present</p>
-                                <p>Translating course content for the YouthMappers Bangladesh Geo-Tech: Drone Sensing Program. Creating accessible Bangla versions of technical geospatial content.</p>
-                                <a href="https://www.emkcenter.org/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi-box-arrow-up-right me-1"></i>EMK Center</a>
+                        <!-- Tab Navigation -->
+                        <ul class="nav nav-tabs" id="experienceTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="professional-tab" data-bs-toggle="tab" data-bs-target="#professional" type="button" role="tab" aria-controls="professional" aria-selected="true">Professional</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="teaching-tab" data-bs-toggle="tab" data-bs-target="#teaching" type="button" role="tab" aria-controls="teaching" aria-selected="false">Teaching</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="leadership-tab" data-bs-toggle="tab" data-bs-target="#leadership" type="button" role="tab" aria-controls="leadership" aria-selected="false">Leadership</button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="experienceTabsContent">
+                            <!-- Professional Tab -->
+                            <div class="tab-pane fade show active" id="professional" role="tabpanel" aria-labelledby="professional-tab">
+                                <div class="exp-item">
+                                    <h4>EMK Center, American Spaces</h4>
+                                    <p class="role"><strong>STEM Content Translator</strong></p>
+                                    <p class="meta">November 2023 – Present</p>
+                                    <p>Translating course content for the YouthMappers Bangladesh Geo-Tech: Drone Sensing Program. Creating accessible Bangla versions of technical geospatial content.</p>
+                                    <a href="https://www.emkcenter.org/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-box-arrow-up-right me-1"></i>EMK Center</a>
+                                </div>
+                                <div class="exp-item">
+                                    <h4>North South University</h4>
+                                    <p class="role"><strong>Research Assistant (Volunteer)</strong> - NSU Spacecraft Lab</p>
+                                    <p class="meta">June 2023 – June 2025 · Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
+                                    <ul>
+                                        <li>LQR-based spacecraft attitude controller design</li>
+                                        <li>CNN-based spacecraft pose estimation model</li>
+                                        <li>Kalman filter implementation for sensor fusion</li>
+                                    </ul>
+                                </div>
+                                <div class="exp-item">
+                                    <h4>Bondstein Technologies Limited</h4>
+                                    <p class="role"><strong>Electronics Production & R&D Intern</strong></p>
+                                    <p class="meta">January 2024 – April 2024</p>
+                                    <p>Product IoT testing and power electronics controller design. Hands-on experience with production-grade electronics development.</p>
+                                </div>
                             </div>
-                            <div class="exp-item">
-                                <h4>North South University</h4>
-                                <p class="role"><strong>Research Assistant (Volunteer)</strong> - NSU Spacecraft Lab</p>
-                                <p class="meta">June 2023 – June 2025 · Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
-                                <ul>
-                                    <li>LQR-based spacecraft attitude controller design</li>
-                                    <li>CNN-based spacecraft pose estimation model</li>
-                                    <li>Kalman filter implementation for sensor fusion</li>
-                                </ul>
+
+                            <!-- Teaching Tab -->
+                            <div class="tab-pane fade" id="teaching" role="tabpanel" aria-labelledby="teaching-tab">
+                                <div class="exp-item">
+                                    <h4>North South University</h4>
+                                    <p class="role"><strong>Student Teaching Assistant</strong></p>
+                                    <p class="meta">September 2023 – June 2024 · Supervisor: <a href="https://ece.northsouth.edu/people/iqbalur-rokon/" target="_blank">Mr. Iqbalur Rahman Rokon</a></p>
+                                    <ul>
+                                        <li><strong>EEE 101</strong>: Principles of Electrical & Electronic Circuits</li>
+                                        <li><strong>EEE 103</strong>: Principles of Electronics</li>
+                                    </ul>
+                                </div>
+                                <div class="exp-item">
+                                    <h4>MindCraft</h4>
+                                    <p class="role"><strong>Junior Instructor (Contract)</strong></p>
+                                    <p class="meta">July 2021 – June 2023</p>
+                                    <p>Taught robotics and STEM concepts to young learners including Arduino programming and electronics projects.</p>
+                                </div>
                             </div>
-                            <div class="exp-item">
-                                <h4>Bondstein Technologies Limited</h4>
-                                <p class="role"><strong>Electronics Production & R&D Intern</strong></p>
-                                <p class="meta">January 2024 – April 2024</p>
-                                <p>Product IoT testing and power electronics controller design. Hands-on experience with production-grade electronics development.</p>
+
+                            <!-- Leadership Tab -->
+                            <div class="tab-pane fade" id="leadership" role="tabpanel" aria-labelledby="leadership-tab">
+                                <div class="exp-item">
+                                    <h4>NSU YES! Club</h4>
+                                    <p class="role"><strong>Executive Committee Member</strong></p>
+                                    <p class="meta">2022 – 2024 · Young Engineers' Society, North South University</p>
+                                    <ul>
+                                        <li>Organized robotics and electronics workshops</li>
+                                        <li>Mentored junior members in project development</li>
+                                        <li>Coordinated inter-university engineering competitions</li>
+                                    </ul>
+                                </div>
+                                <div class="exp-item">
+                                    <h4>Robotics Club of Rajuk (RCRC)</h4>
+                                    <p class="role"><strong>President</strong></p>
+                                    <p class="meta">2016 – 2018 · Rajuk Uttara Model College</p>
+                                    <ul>
+                                        <li>Led robotics club with 100+ student members</li>
+                                        <li>Established electronics lab facilities</li>
+                                        <li>Led teams in IUT RoboGames & DRMC TechFest</li>
+                                    </ul>
+                                </div>
                             </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Teaching Experience</h2>
-                            <div class="exp-item">
-                                <h4>North South University</h4>
-                                <p class="role"><strong>Student Teaching Assistant</strong></p>
-                                <p class="meta">September 2023 – June 2024 · Supervisor: <a href="https://ece.northsouth.edu/people/iqbalur-rokon/" target="_blank">Mr. Iqbalur Rahman Rokon</a></p>
-                                <ul>
-                                    <li><strong>EEE 101</strong>: Principles of Electrical & Electronic Circuits</li>
-                                    <li><strong>EEE 103</strong>: Principles of Electronics</li>
-                                </ul>
-                            </div>
-                            <div class="exp-item">
-                                <h4>MindCraft</h4>
-                                <p class="role"><strong>Junior Instructor (Contract)</strong></p>
-                                <p class="meta">July 2021 – June 2023</p>
-                                <p>Taught robotics and STEM concepts to young learners including Arduino programming and electronics projects.</p>
-                            </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Leadership & Activities</h2>
-                            <div class="exp-item">
-                                <h4>NSU YES! Club</h4>
-                                <p class="role"><strong>Executive Committee Member</strong></p>
-                                <p class="meta">2022 – 2024 · Young Engineers' Society, North South University</p>
-                                <ul>
-                                    <li>Organized robotics and electronics workshops</li>
-                                    <li>Mentored junior members in project development</li>
-                                    <li>Coordinated inter-university engineering competitions</li>
-                                </ul>
-                            </div>
-                            <div class="exp-item">
-                                <h4>Robotics Club of Rajuk (RCRC)</h4>
-                                <p class="role"><strong>President</strong></p>
-                                <p class="meta">2016 – 2018 · Rajuk Uttara Model College</p>
-                                <ul>
-                                    <li>Led robotics club with 100+ student members</li>
-                                    <li>Established electronics lab facilities</li>
-                                    <li>Led teams in IUT RoboGames & DRMC TechFest</li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Competition Achievements</h2>
-                            <div class="exp-item">
-                                <p><strong><i class="bi-trophy text-warning me-2"></i>Champion</strong> - IUT RoboGames 2019 (Line Following Robot)</p>
-                            </div>
-                            <div class="exp-item">
-                                <p><strong><i class="bi-award text-info me-2"></i>1st Runner-Up</strong> - DRMC TechFest 2017 (Line Following Robot)</p>
-                            </div>
-                            <div class="exp-item">
-                                <p><strong><i class="bi-award text-success me-2"></i>2nd Runner-Up</strong> - IUT RoboGames 2018 (Line Following Robot)</p>
-                            </div>
-                        </section>
+                        </div>
                     </div>
                 </div>
             </div>
