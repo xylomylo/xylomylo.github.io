@@ -40,6 +40,11 @@
             .supervisor-card { padding: 1rem; border: 1px solid #e9ecef; border-radius: 8px; text-align: center; }
             .supervisor-card h5 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem; }
             .supervisor-card p { font-size: 0.8rem; color: #6c757d; margin-bottom: 0; }
+            .nav-tabs { border-bottom: 2px solid #e9ecef; margin-bottom: 1.5rem; }
+            .nav-tabs .nav-link { border: none; border-bottom: 2px solid transparent; color: #6c757d; font-weight: 500; padding: 0.75rem 1.25rem; margin-bottom: -2px; transition: all 0.2s; }
+            .nav-tabs .nav-link:hover { color: #0d6efd; border-color: transparent; }
+            .nav-tabs .nav-link.active { color: #0d6efd; border-bottom: 2px solid #0d6efd; background-color: transparent; }
+            .tab-content { padding-top: 0.5rem; }
         </style>
     </head>
     <body>
@@ -77,61 +82,83 @@
                                 <div class="divider"></div>
                             </div>
                             <div class="social-links mt-3">
-                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" title="ResearchGate"><i class="bi-journal-text"></i></a>
-                                <a href="https://orcid.org/0009-0003-8339-7838" target="_blank" title="ORCID"><i class="bi-person-badge"></i></a>
-                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" title="LinkedIn"><i class="bi-linkedin"></i></a>
-                                <a href="https://github.com/xylomylo" target="_blank" title="GitHub"><i class="bi-github"></i></a>
+                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" title="ResearchGate"><i class="bi bi-journal-text"></i></a>
+                                <a href="https://orcid.org/0009-0003-8339-7838" target="_blank" title="ORCID"><i class="bi bi-person-badge"></i></a>
+                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/xylomylo" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-8">
-                        <section class="mb-5">
-                            <h2 class="section-title">Publications</h2>
-                            <div class="research-item">
-                                <h4>Bangla Texting on Smartphones: Exploring the challenges faced by Users of Bangla Keyboard</h4>
-                                <p class="meta">2024-2025  - Co-Authored with Most. Rumana Aktar <a href="https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en" target="_blank">Dr. Mahdy Rahman Chowdhury</a></p>
-                                <p>Replicated <a href="https://www.sciencedirect.com/science/article/pii/S2405844023106578" target="_blank">published results</a> in COMSOL Multiphysics and Quantum Espresso; attempted a novel approach to quantum mechanical trapping using matter waves.</p>
-                                <a href="https://www.canva.com/design/DAGHtj4JSEY/mIrDE-2Q_oaq9_5ZdW7QPQ/view" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi-file-slides me-1"></i>View Presentation</a>
+                        <!-- Tab Navigation -->
+                        <ul class="nav nav-tabs" id="researchTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="publications-tab" data-bs-toggle="tab" data-bs-target="#publications" type="button" role="tab" aria-controls="publications" aria-selected="true">Publications</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="directed-tab" data-bs-toggle="tab" data-bs-target="#directed" type="button" role="tab" aria-controls="directed" aria-selected="false">Directed Research</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="academic-tab" data-bs-toggle="tab" data-bs-target="#academic" type="button" role="tab" aria-controls="academic" aria-selected="false">Academic Research</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="supervisors-tab" data-bs-toggle="tab" data-bs-target="#supervisors" type="button" role="tab" aria-controls="supervisors" aria-selected="false">Supervisors</button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="researchTabsContent">
+                            <!-- Publications Tab -->
+                            <div class="tab-pane fade show active" id="publications" role="tabpanel" aria-labelledby="publications-tab">
+                                <div class="research-item">
+                                    <h4>Bangla Texting on Smartphones: Exploring the challenges faced by Users of Bangla Keyboard</h4>
+                                    <p class="meta">2024-2025 - Co-Authored with Most. Rumana Aktar, <a href="https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en" target="_blank">Dr. Mahdy Rahman Chowdhury</a></p>
+                                    <p>Qualitative and quantitative research exploring user challenges with Bangla keyboards on smartphones, analyzing pain points and suggested improvements through survey data.</p>
+                                    <a href="research/BanglaTextingOnSmartPhones.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-images me-1"></i>View Research Details</a>
+                                </div>
                             </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Directed Research Work</h2>
-                            <div class="research-item">
-                                <h4>Quantum Mechanical Trapping of a Spinless Particle using Matterwaves</h4>
-                                <p class="meta">2024-2025 - Research Training - Supervisor: <a href="https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en" target="_blank">Dr. Mahdy Rahman Chowdhury</a></p>
-                                <p>Replicated <a href="https://www.sciencedirect.com/science/article/pii/S2405844023106578" target="_blank">published results</a> in COMSOL Multiphysics and Quantum Espresso; attempted a novel approach to quantum mechanical trapping using matter waves.</p>
-                                <a href="https://www.canva.com/design/DAGHtj4JSEY/mIrDE-2Q_oaq9_5ZdW7QPQ/view" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi-file-slides me-1"></i>View Presentation</a>
+
+                            <!-- Directed Research Tab -->
+                            <div class="tab-pane fade" id="directed" role="tabpanel" aria-labelledby="directed-tab">
+                                <div class="research-item">
+                                    <h4>Quantum Mechanical Trapping of a Spinless Particle using Matterwaves</h4>
+                                    <p class="meta">2024-2025 - Research Training - Supervisor: <a href="https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en" target="_blank">Dr. Mahdy Rahman Chowdhury</a></p>
+                                    <p>Replicated <a href="https://www.sciencedirect.com/science/article/pii/S2405844023106578" target="_blank">published results</a> in COMSOL Multiphysics and Quantum Espresso; attempted a novel approach to quantum mechanical trapping using matter waves.</p>
+                                    <a href="https://www.canva.com/design/DAGHtj4JSEY/mIrDE-2Q_oaq9_5ZdW7QPQ/view" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-slides me-1"></i>View Presentation</a>
+                                </div>
+                                <div class="research-item">
+                                    <h4>Pose Estimation of Target Spacecraft from a 3U CubeSat with Deep Learning Methods</h4>
+                                    <p class="meta">2024 - <a href="http://www.apsco.int" target="_blank">APSCO</a> Competition & BSc Thesis - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
+                                    <p>Derived mission parameters for stable pose estimation of target spacecraft in Low Earth Orbit, developed an Attitude Determination & Control System model in MATLAB.</p>
+                                    <a href="https://drive.google.com/file/d/1jmDFps1sxxSo2bpzIJzQsx7QF3koQ-rs/view" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Thesis</a>
+                                </div>
                             </div>
-                            <div class="research-item">
-                                <h4>Pose Estimation of Target Spacecraft from a 3U CubeSat with Deep Learning Methods</h4>
-                                <p class="meta">2024 - <a href="http://www.apsco.int" target="_blank">APSCO</a> Competition & BSc Thesis - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
-                                <p>Derived mission parameters for stable pose estimation of target spacecraft in Low Earth Orbit, developed an Attitude Determination & Control System model in MATLAB.</p>
-                                <a href="https://drive.google.com/file/d/1jmDFps1sxxSo2bpzIJzQsx7QF3koQ-rs/view" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi-file-pdf me-1"></i>View Thesis</a>
+
+                            <!-- Academic Research Tab -->
+                            <div class="tab-pane fade" id="academic" role="tabpanel" aria-labelledby="academic-tab">
+                                <div class="research-item">
+                                    <h4>A Technical Introduction to Quantum Computing</h4>
+                                    <p class="meta">2025 - Systems & Networks Coursework - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=2HYoslMAAAAJ" target="_blank">Dr. Gail Hopkins</a></p>
+                                    <p>Presented the mathematical foundations and core principles of quantum computing, using LaTeX and Manim for visualization.</p>
+                                    <a href="https://drive.google.com/file/d/1gSCRknBMKnTRYYKIB4Tr7QXfM_d4PxOR/view" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="research-item">
+                                    <h4>Extended Kalman Filtering in Spacecraft Attitude Determination</h4>
+                                    <p class="meta">2024 - Independent Study - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
+                                    <p>MATLAB simulation for Detumbling & Nominal Modes with sensor fusion, analyzing pre-filter & post-filter state readings.</p>
+                                    <a href="https://drive.google.com/file/d/1H5tbD_JmRvl__UqDHD4sPWXwMc_bIxhD/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
                             </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Academic Research Work</h2>
-                            <div class="research-item">
-                                <h4>A Technical Introduction to Quantum Computing</h4>
-                                <p class="meta">2025 - Systems & Networks Coursework - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=2HYoslMAAAAJ" target="_blank">Dr. Gail Hopkins</a></p>
-                                <p>Presented the mathematical foundations and core principles of quantum computing, using LaTeX and Manim for visualization.</p>
-                                <a href="https://drive.google.com/file/d/1gSCRknBMKnTRYYKIB4Tr7QXfM_d4PxOR/view" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi-file-pdf me-1"></i>View Report</a>
+
+                            <!-- Supervisors Tab -->
+                            <div class="tab-pane fade" id="supervisors" role="tabpanel" aria-labelledby="supervisors-tab">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3"><div class="supervisor-card"><h5><a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></h5><p>Professor, North South University</p></div></div>
+                                    <div class="col-md-4 mb-3"><div class="supervisor-card"><h5><a href="https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en" target="_blank">Dr. Mahdy R. Chowdhury</a></h5><p>Asst. Professor, North South University</p></div></div>
+                                    <div class="col-md-4 mb-3"><div class="supervisor-card"><h5><a href="https://scholar.google.com/citations?hl=en&user=2HYoslMAAAAJ" target="_blank">Dr. Gail Hopkins</a></h5><p>Assoc. Professor, University of Nottingham</p></div></div>
+                                </div>
                             </div>
-                            <div class="research-item">
-                                <h4>Extended Kalman Filtering in Spacecraft Attitude Determination</h4>
-                                <p class="meta">2024 - Independent Study - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
-                                <p>MATLAB simulation for Detumbling & Nominal Modes with sensor fusion, analyzing pre-filter & post-filter state readings.</p>
-                                <a href="https://drive.google.com/file/d/1H5tbD_JmRvl__UqDHD4sPWXwMc_bIxhD/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi-file-pdf me-1"></i>View Report</a>
-                            </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Research Supervisors</h2>
-                            <div class="row">
-                                <div class="col-md-4 mb-3"><div class="supervisor-card"><h5><a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></h5><p>Professor, North South University</p></div></div>
-                                <div class="col-md-4 mb-3"><div class="supervisor-card"><h5><a href="https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en" target="_blank">Dr. Mahdy R. Chowdhury</a></h5><p>Asst. Professor, North South University</p></div></div>
-                                <div class="col-md-4 mb-3"><div class="supervisor-card"><h5><a href="https://scholar.google.com/citations?hl=en&user=2HYoslMAAAAJ" target="_blank">Dr. Gail Hopkins</a></h5><p>Assoc. Professor, University of Nottingham</p></div></div>
-                            </div>
-                        </section>
+                        </div>
                     </div>
                 </div>
             </div>
