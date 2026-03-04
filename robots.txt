@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xylomylo.github.io/sitemap.xml
