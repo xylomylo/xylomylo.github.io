@@ -37,6 +37,11 @@
             .minimal-footer { background-color: #f8f9fa; border-top: 1px solid #e9ecef; padding: 2rem 0; margin-top: 3rem; }
             .minimal-footer p { color: #6c757d; margin-bottom: 0; font-size: 0.875rem; }
             .divider { border-top: 1px solid #e9ecef; margin: 1.5rem 0; }
+            .nav-tabs { border-bottom: 2px solid #e9ecef; margin-bottom: 1.5rem; }
+            .nav-tabs .nav-link { border: none; border-bottom: 2px solid transparent; color: #6c757d; font-weight: 500; padding: 0.75rem 1.25rem; margin-bottom: -2px; transition: all 0.2s; }
+            .nav-tabs .nav-link:hover { color: #0d6efd; border-color: transparent; }
+            .nav-tabs .nav-link.active { color: #0d6efd; border-bottom: 2px solid #0d6efd; background-color: transparent; }
+            .tab-content { padding-top: 0.5rem; }
         </style>
     </head>
     <body>
@@ -82,91 +87,112 @@
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-8">
-                        <section class="mb-5">
-                            <h2 class="section-title">Control Systems</h2>
-                            <div class="project-item">
-                                <h4>Attitude Determination using Kalman Filtering</h4>
-                                <p class="meta">2024 - EEE494 - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
-                                <p>MATLAB simulation for Detumbling & Nominal Modes with sensor fusion, analyzing pre-filter & post-filter state readings.</p>
-                                <a href="projects/eee494-kalman-filtering.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                        <!-- Tab Navigation -->
+                        <ul class="nav nav-tabs" id="projectTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="control-tab" data-bs-toggle="tab" data-bs-target="#control" type="button" role="tab" aria-controls="control" aria-selected="true">Control Systems</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="vlsi-tab" data-bs-toggle="tab" data-bs-target="#vlsi" type="button" role="tab" aria-controls="vlsi" aria-selected="false">VLSI & Digital</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="embedded-tab" data-bs-toggle="tab" data-bs-target="#embedded" type="button" role="tab" aria-controls="embedded" aria-selected="false">Embedded & Biomedical</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="robotics-tab" data-bs-toggle="tab" data-bs-target="#robotics" type="button" role="tab" aria-controls="robotics" aria-selected="false">Robotics</button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="projectTabsContent">
+                            <!-- Control Systems Tab -->
+                            <div class="tab-pane fade show active" id="control" role="tabpanel" aria-labelledby="control-tab">
+                                <div class="project-item">
+                                    <h4>Attitude Determination using Kalman Filtering</h4>
+                                    <p class="meta">2024 - EEE494 - Supervisor: <a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Dr. Shahnewaz Siddique</a></p>
+                                    <p>MATLAB simulation for Detumbling & Nominal Modes with sensor fusion, analyzing pre-filter & post-filter state readings.</p>
+                                    <a href="projects/eee494-kalman-filtering.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Quaternion-based LQR Attitude Controller</h4>
+                                    <p class="meta">2024-2025 - Research Assistant, NSU Spacecraft Lab</p>
+                                    <p>Designed and implemented a Quaternion-based Linear Quadratic Regulated attitude controller for a 3U CubeSat.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>APSCO CubeSat Preliminary Design Report</h4>
+                                    <p class="meta">2024 - NSU Spacecraft Lab</p>
+                                    <p>Preliminary Design Report for APSCO SSS Program CubeSat including mission design, subsystem specifications, and trade studies.</p>
+                                    <a href="projects/apsco-cubesat-design.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Senior Design: Pose Estimation</h4>
+                                    <p class="meta">2024 - EEE499A - Senior Design Thesis</p>
+                                    <p>Marker and Markerless Pose Estimation research for Senior Design with deep learning-based approaches for real-time pose detection.</p>
+                                    <a href="projects/eee499a-pose-estimation.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
                             </div>
-                            <div class="project-item">
-                                <h4>Quaternion-based LQR Attitude Controller</h4>
-                                <p class="meta">2024-2025 - Research Assistant, NSU Spacecraft Lab</p>
-                                <p>Designed and implemented a Quaternion-based Linear Quadratic Regulated attitude controller for a 3U CubeSat.</p>
+
+                            <!-- VLSI & Digital Design Tab -->
+                            <div class="tab-pane fade" id="vlsi" role="tabpanel" aria-labelledby="vlsi-tab">
+                                <div class="project-item">
+                                    <h4>VLSI Logic Gate Layout Design</h4>
+                                    <p class="meta">2024 - EEE411 - Supervisor: <a href="https://ece.northsouth.edu/people/iqbalur-rokon/" target="_blank">Mr. Iqbalur Rahman Rokon</a></p>
+                                    <p>Designed and implemented CMOS logic gates using Cadence Virtuoso and Microwind, including DRC/LVS verification and DC/transient simulations.</p>
+                                    <a href="projects/eee411-vlsi-layout.html" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                    <a href="projects/vlsiproject.html" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-folder me-1"></i>Project Files</a>
+                                </div>
                             </div>
-                            <div class="project-item">
-                                <h4>APSCO CubeSat Preliminary Design Report</h4>
-                                <p class="meta">2024 - NSU Spacecraft Lab</p>
-                                <p>Preliminary Design Report for APSCO SSS Program CubeSat including mission design, subsystem specifications, and trade studies.</p>
-                                <a href="projects/apsco-cubesat-design.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+
+                            <!-- Embedded Systems & Biomedical Tab -->
+                            <div class="tab-pane fade" id="embedded" role="tabpanel" aria-labelledby="embedded-tab">
+                                <div class="project-item">
+                                    <h4>Pulse Oximeter using PIC Microcontroller</h4>
+                                    <p class="meta">2023 - EEE332 - Supervisor: <a href="https://ece.northsouth.edu/people/dr-sakhawat-hussain/" target="_blank">Dr. Shakhawat Hossain</a></p>
+                                    <p>Designed and implemented a pulse oximeter based on peak detection of Photoplethysmography signals using a PIC-Microcontroller with hardware-in-the-loop.</p>
+                                    <a href="projects/eee332-pulse-oximeter.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>7-Segment Display Project</h4>
+                                    <p class="meta">2021 - EEE211 (Electronic Devices & Circuits)</p>
+                                    <p>Design and implementation of a 7-segment display driver circuit using discrete electronic components and logic gates.</p>
+                                    <a href="projects/eee211-7segment-display.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Audio Mixer with Power Supply Unit</h4>
+                                    <p class="meta">2023 - EEE311 (Electronics II)</p>
+                                    <p>Multi-channel audio mixer with integrated power supply unit, featuring individual volume control and balanced output using op-amp circuits.</p>
+                                    <a href="projects/eee311-audio-mixer.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Smart Car Parking System</h4>
+                                    <p class="meta">2022 - EEE299 (Junior Design Project)</p>
+                                    <p>Automated parking system using Arduino with IR sensors for vehicle detection, servo motors for barrier control, and LCD display for slot availability.</p>
+                                    <a href="projects/eee299-smart-parking.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Physical Circuit Designs</h4>
+                                    <p class="meta">2014-2020 - Hardware Design Projects</p>
+                                    <p>Circuit designs and PCB layouts for various robotics and embedded systems projects, including sensor arrays and microcontroller interfaces.</p>
+                                    <a href="https://oshwlab.com/anan.faiyaz/Atmega2560" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-cpu me-1"></i>View on OSHWLab</a>
+                                </div>
                             </div>
-                            <div class="project-item">
-                                <h4>Senior Design: Pose Estimation</h4>
-                                <p class="meta">2024 - EEE499A - Senior Design Thesis</p>
-                                <p>Marker and Markerless Pose Estimation research for Senior Design with deep learning-based approaches for real-time pose detection.</p>
-                                <a href="projects/eee499a-pose-estimation.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+
+                            <!-- Robotics Projects Tab -->
+                            <div class="tab-pane fade" id="robotics" role="tabpanel" aria-labelledby="robotics-tab">
+                                <div class="project-item">
+                                    <h4>PID-Controlled Quadcopter</h4>
+                                    <p class="meta">2014-2020 - Personal & Competition Projects</p>
+                                    <p>Built quadcopter (multiple iterations), designed and implemented physical circuits & PID controllers, using sensor fusion and gain value optimization in MATLAB.</p>
+                                    <a href="https://drive.google.com/drive/folders/1uNBSVZH2_dy0_Oq0cVGIfgUmEq9-XBOY" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-folder me-1"></i>View Project Files</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Line Following Robot</h4>
+                                    <p class="meta">2014-2020 - Team Projects for Competitions</p>
+                                    <p>Designed and built line following robots for national competitions, implementing PID control algorithms and sensor arrays using Arduino platform.</p>
+                                    <a href="https://drive.google.com/drive/folders/1gryL8Wh1tVB2gNVJjn_W8aFoTBzCbPA8?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-folder me-1"></i>View Project Files</a>
+                                </div>
                             </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">VLSI & Digital Design</h2>
-                            <div class="project-item">
-                                <h4>VLSI Logic Gate Layout Design</h4>
-                                <p class="meta">2024 - EEE411 - Supervisor: <a href="https://ece.northsouth.edu/people/iqbalur-rokon/" target="_blank">Mr. Iqbalur Rahman Rokon</a></p>
-                                <p>Designed and implemented CMOS logic gates using Cadence Virtuoso and Microwind, including DRC/LVS verification and DC/transient simulations.</p>
-                                <a href="projects/eee411-vlsi-layout.html" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-file-pdf me-1"></i>View Report</a>
-                                <a href="projects/vlsiproject.html" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-folder me-1"></i>Project Files</a>
-                                <!--a href="https://drive.google.com/drive/folders/1z_m9oPKGY4GZCL-_jfyNqZMk-NUp1QEf" target="_blank" class="btn btn-outline-secondary btn-sm"><i class="bi bi-folder me-1"></i>Project Files</a-->
-                            </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Embedded Systems & Biomedical</h2>
-                            <div class="project-item">
-                                <h4>Pulse Oximeter using PIC Microcontroller</h4>
-                                <p class="meta">2023 - EEE332 - Supervisor: <a href="https://ece.northsouth.edu/people/dr-sakhawat-hussain/" target="_blank">Dr. Shakhawat Hossain</a></p>
-                                <p>Designed and implemented a pulse oximeter based on peak detection of Photoplethysmography signals using a PIC-Microcontroller with hardware-in-the-loop.</p>
-                                <a href="projects/eee332-pulse-oximeter.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
-                            </div>
-                            <div class="project-item">
-                                <h4>7-Segment Display Project</h4>
-                                <p class="meta">2021 - EEE211 (Electronic Devices & Circuits)</p>
-                                <p>Design and implementation of a 7-segment display driver circuit using discrete electronic components and logic gates.</p>
-                                <a href="projects/eee211-7segment-display.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
-                            </div>
-                            <div class="project-item">
-                                <h4>Audio Mixer with Power Supply Unit</h4>
-                                <p class="meta">2023 - EEE311 (Electronics II)</p>
-                                <p>Multi-channel audio mixer with integrated power supply unit, featuring individual volume control and balanced output using op-amp circuits.</p>
-                                <a href="projects/eee311-audio-mixer.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
-                            </div>
-                            <div class="project-item">
-                                <h4>Smart Car Parking System</h4>
-                                <p class="meta">2022 - EEE299 (Junior Design Project)</p>
-                                <p>Automated parking system using Arduino with IR sensors for vehicle detection, servo motors for barrier control, and LCD display for slot availability.</p>
-                                <a href="projects/eee299-smart-parking.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
-                            </div>
-                            <div class="project-item">
-                                <h4>Physical Circuit Designs</h4>
-                                <p class="meta">2014-2020 - Hardware Design Projects</p>
-                                <p>Circuit designs and PCB layouts for various robotics and embedded systems projects, including sensor arrays and microcontroller interfaces.</p>
-                                <a href="https://oshwlab.com/anan.faiyaz/Atmega2560" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-cpu me-1"></i>View on OSHWLab</a>
-                            </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Robotics Projects</h2>
-                            <div class="project-item">
-                                <h4>PID-Controlled Quadcopter</h4>
-                                <p class="meta">2014-2020 - Personal & Competition Projects</p>
-                                <p>Built quadcopter (multiple iterations), designed and implemented physical circuits & PID controllers, using sensor fusion and gain value optimization in MATLAB.</p>
-                                <a href="https://drive.google.com/drive/folders/1uNBSVZH2_dy0_Oq0cVGIfgUmEq9-XBOY" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-folder me-1"></i>View Project Files</a>
-                            </div>
-                            <div class="project-item">
-                                <h4>Line Following Robot</h4>
-                                <p class="meta">2014-2020 - Team Projects for Competitions</p>
-                                <p>Designed and built line following robots for national competitions, implementing PID control algorithms and sensor arrays using Arduino platform.</p>
-                                <a href="https://drive.google.com/drive/folders/1gryL8Wh1tVB2gNVJjn_W8aFoTBzCbPA8?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-folder me-1"></i>View Project Files</a>
-                            </div>
-                        </section>
+                        </div>
                         
                     </div>
                 </div>
