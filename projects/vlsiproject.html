@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="VLSI Logic Gate Layout Image Gallery - Anan Faiyaz Radin">
+        <meta name="author" content="Anan Faiyaz Radin">
+        <title>VLSI Logic Gate Layout Gallery | Anan Faiyaz Radin</title>
+        <link rel="icon" href="../images/favicon.ico" type="images/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
+        <style>
+            body { background-color: #fff; }
+            .site-header { background-color: #f8f9fa; border-bottom: 1px solid #e9ecef; padding: 1rem 0; }
+            .site-header .navbar-brand { font-size: 1.5rem; font-weight: 700; color: #212529; }
+            .site-header .nav-link { color: #495057; font-weight: 500; padding: 0.5rem 1rem; }
+            .site-header .nav-link:hover, .site-header .nav-link.active { color: #0d6efd; }
+            .main-content { padding: 2rem 0 4rem; }
+            .section-title { font-size: 1.5rem; font-weight: 700; color: #212529; margin-bottom: 0.5rem; }
+            .project-meta { color: #6c757d; font-size: 0.95rem; margin-bottom: 1.5rem; }
+            .project-description { color: #495057; line-height: 1.8; margin-bottom: 2rem; }
+            .back-btn { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #e9ecef; color: #495057; border-radius: 6px; text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
+            .back-btn:hover { border-color: #0d6efd; color: #0d6efd; }
+            .minimal-footer { background-color: #f8f9fa; border-top: 1px solid #e9ecef; padding: 2rem 0; margin-top: 3rem; }
+            .minimal-footer p { color: #6c757d; margin-bottom: 0; font-size: 0.875rem; }
+            .gallery-section { margin-bottom: 2.5rem; }
+            .gallery-section h3 { font-size: 1.1rem; font-weight: 600; color: #212529; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e9ecef; }
+            .gallery-item { margin-bottom: 1.5rem; }
+            .gallery-item img { width: 100%; height: auto; border: 1px solid #e9ecef; border-radius: 8px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+            .gallery-item img:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+            .gallery-item .caption { font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center; }
+            .modal-img { max-width: 100%; max-height: 85vh; }
+        </style>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <a href="../index.html" class="navbar-brand">Anan Faiyaz Radin</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../publications.html">Research</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="../projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../experience.html">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../cv.html">CV</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="../projects.html" class="back-btn mb-4 d-inline-block"><i class="bi bi-arrow-left me-2"></i>Back to Projects</a>
+                        <h1 class="section-title">VLSI Logic Gate Layout Gallery</h1>
+                        <p class="project-meta">
+                            <strong>Course:</strong> EEE411 (VLSI Design & Fabrication) · <strong>Year:</strong> 2023 · <strong>Supervisor:</strong> <a href="https://ece.northsouth.edu/people/iqbalur-rokon/" target="_blank">Mr. Iqbalur Rahman Rokon</a>
+                        </p>
+                        <div class="project-description">
+                            <p>This gallery showcases the schematic designs, layouts, DRC/LVS verification results, and simulation outputs for various CMOS logic gates designed using Cadence Virtuoso and Microwind.</p>
+                        </div>
+
+                        <!-- NOT Gate Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-cpu me-2"></i>NOT Gate (Inverter)</h3>
+                            <div class="row">
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Anan%20-%20411%20Lab%20-%20NOT%20Gate%20Schematic.JPG" alt="NOT Gate Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">NOT Gate Schematic</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Anan%20-%20411%20Lab%20-%20NOT%20Gate%20ADEL.JPG" alt="NOT Gate ADEL" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">NOT Gate ADEL View</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Anan%20-%20411%20Lab%20-%20NOT%20Gate%20-%20DC-Trans%20Plots.JPG" alt="NOT Gate DC-Trans Plots" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">DC & Transient Analysis</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NAND2 Gate Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-cpu me-2"></i>NAND2 Gate</h3>
+                            <div class="row">
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/lab2-nand2%20Schematic.JPG" alt="NAND2 Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">NAND2 Schematic</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Layout%20Diagram%20-%20Nand2.JPG" alt="NAND2 Layout" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Layout Diagram</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Layout%20Nand%202%20-%20After%20DRC.JPG" alt="NAND2 Layout After DRC" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Layout After DRC</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Nand2%20DRC.JPG" alt="NAND2 DRC" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">DRC Verification</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Match%20Report%20-%20LVS%20-Nand2.JPG" alt="NAND2 LVS Match Report" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">LVS Match Report</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/lab2-nand2%20Graphs%20-%20DC%20Trans.JPG" alt="NAND2 DC Trans Graphs" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">DC & Transient Graphs</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NOR3 Gate Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-cpu me-2"></i>NOR3 Gate</h3>
+                            <div class="row">
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Schematic-%20NOR3.JPG" alt="NOR3 Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">NOR3 Schematic (Microwind)</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/NOR3%20-%20Anan%20-%20Schematic.PNG" alt="NOR3 Schematic Cadence" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">NOR3 Schematic (Cadence)</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/Layout-%20NOR3.JPG" alt="NOR3 Layout" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">NOR3 Layout</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/DRC-NOR3.JPG" alt="NOR3 DRC" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">DRC Verification</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/LVS-%20NOR3.JPG" alt="NOR3 LVS" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">LVS Verification</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/NOR3%20-%20Anan%20-%20IOs.PNG" alt="NOR3 IOs" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Input/Output Pins</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="vlsi-images/NOR3%20-%20Anan%20-%20Graphs.PNG" alt="NOR3 Graphs" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Simulation Graphs</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MUX Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-cpu me-2"></i>Multiplexer (MUX)</h3>
+                            <div class="row">
+                                <div class="col-md-6 gallery-item">
+                                    <img src="vlsi-images/MUX%20-%20Transient%20Schematic.PNG" alt="MUX Transient Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">MUX Transient Schematic</p>
+                                </div>
+                                <div class="col-md-6 gallery-item">
+                                    <img src="vlsi-images/MUX%20-%20Transient.PNG" alt="MUX Transient" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">MUX Transient Analysis</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Image Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="" alt="" class="modal-img" id="modalImage">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="minimal-footer"><div class="container"><div class="row"><div class="col-12 text-center"><p>Copyright 2026 Anan Faiyaz Radin. All rights reserved.</p></div></div></div></footer>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            function showImage(img) {
+                document.getElementById('modalImage').src = img.src;
+                document.getElementById('modalImage').alt = img.alt;
+                document.getElementById('imageModalLabel').textContent = img.alt;
+            }
+        </script>
+    </body>
+</html>
