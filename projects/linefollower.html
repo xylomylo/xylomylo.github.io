@@ -11,9 +11,9 @@
         </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="VLSI Logic Gate Layout Image Gallery - Anan Faiyaz Radin">
+        <meta name="description" content="Line Follower Robot Project - Design and Competition - Anan Faiyaz Radin">
         <meta name="author" content="Anan Faiyaz Radin">
-        <title>VLSI Logic Gate Layout Gallery | Anan Faiyaz Radin</title>
+        <title>Line Follower Robot | Anan Faiyaz Radin</title>
         <link rel="icon" href="../images/favicon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +43,10 @@
             .gallery-item img:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
             .gallery-item .caption { font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center; }
             .modal-img { max-width: 100%; max-height: 85vh; }
+            .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 1rem; }
+            .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+            .video-item { margin-bottom: 1.5rem; }
+            .video-item .caption { font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center; }
         </style>
     </head>
     <body>
@@ -70,110 +74,104 @@
                 <div class="row">
                     <div class="col-12">
                         <a href="../projects.html" class="back-btn mb-4 d-inline-block"><i class="bi bi-arrow-left me-2"></i>Back to Projects</a>
-                        <h1 class="section-title">VLSI Logic Gate Layout Gallery</h1>
+                        <h1 class="section-title">Line Follower Robot</h1>
                         <p class="project-meta">
-                            <strong>Course:</strong> EEE411 (VLSI Design & Fabrication) · <strong>Year:</strong> 2023 · <strong>Supervisor:</strong> <a href="https://ece.northsouth.edu/people/iqbalur-rokon/" target="_blank">Mr. Iqbalur Rahman Rokon</a>
+                            <strong>Type:</strong> Robotics Competition · <strong>Year:</strong> 2018 · <strong>Achievement:</strong> Finalist - Engenius Competition
                         </p>
                         <div class="project-description">
-                            <p>This gallery showcases the schematic designs, layouts, DRC/LVS verification results, and simulation outputs for various CMOS logic gates designed using Cadence Virtuoso and Microwind.</p>
+                            <p>Design and development of an autonomous line following robot for the Engenius Line Following Robotics Competition at Ahsanullah University of Technology. The robot achieved Top 8 placement among all competing teams.</p>
+                            <p><strong>Key Components:</strong> IR Sensors, PID Controller, Microcontroller, DC Motors, Motor Driver</p>
                         </div>
 
-                        <!-- NOT Gate Section -->
+                        <!-- Competition Videos Section -->
                         <div class="gallery-section">
-                            <h3><i class="bi bi-cpu me-2"></i>NOT Gate (Inverter)</h3>
+                            <h3><i class="bi bi-camera-video me-2"></i>Competition Videos</h3>
                             <div class="row">
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Anan%20-%20411%20Lab%20-%20NOT%20Gate%20Schematic.JPG" alt="NOT Gate Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">NOT Gate Schematic</p>
+                                <div class="col-md-6 video-item">
+                                    <div class="video-container">
+                                        <!-- Replace VIDEO_ID_1 with actual YouTube video ID -->
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/m7iuoTS5qyI?si=W7fo0yk5O_iAtdct" title="First Run" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="caption">Competition Run</p>
                                 </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Anan%20-%20411%20Lab%20-%20NOT%20Gate%20ADEL.JPG" alt="NOT Gate ADEL" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">NOT Gate ADEL View</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Anan%20-%20411%20Lab%20-%20NOT%20Gate%20-%20DC-Trans%20Plots.JPG" alt="NOT Gate DC-Trans Plots" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">DC & Transient Analysis</p>
+                                <div class="col-md-6 video-item">
+                                    <div class="video-container">
+                                        <!-- Replace VIDEO_ID_2 with actual YouTube video ID -->
+                                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Practice Session" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="caption">Practice Session</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- NAND2 Gate Section -->
+                        <!-- Robot Build Section -->
                         <div class="gallery-section">
-                            <h3><i class="bi bi-cpu me-2"></i>NAND2 Gate</h3>
+                            <h3><i class="bi bi-tools me-2"></i>Robot Build</h3>
                             <div class="row">
                                 <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/lab2-nand2%20Schematic.JPG" alt="NAND2 Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">NAND2 Schematic</p>
+                                    <!-- Replace with actual image path -->
+                                    <img src="linefollower-images/placeholder-chassis.jpg" alt="Chassis Design" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Chassis Design</p>
                                 </div>
                                 <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Layout%20Diagram%20-%20Nand2.JPG" alt="NAND2 Layout" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">Layout Diagram</p>
+                                    <img src="linefollower-images/placeholder-sensors.jpg" alt="Sensor Array" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">IR Sensor Array</p>
                                 </div>
                                 <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Layout%20Nand%202%20-%20After%20DRC.JPG" alt="NAND2 Layout After DRC" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">Layout After DRC</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Nand2%20DRC.JPG" alt="NAND2 DRC" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">DRC Verification</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Match%20Report%20-%20LVS%20-Nand2.JPG" alt="NAND2 LVS Match Report" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">LVS Match Report</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/lab2-nand2%20Graphs%20-%20DC%20Trans.JPG" alt="NAND2 DC Trans Graphs" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">DC & Transient Graphs</p>
+                                    <img src="linefollower-images/placeholder-circuit.jpg" alt="Circuit Board" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Circuit Board</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- NOR3 Gate Section -->
+                        <!-- Completed Robot Section -->
                         <div class="gallery-section">
-                            <h3><i class="bi bi-cpu me-2"></i>NOR3 Gate</h3>
-                            <div class="row">
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Schematic-%20NOR3.JPG" alt="NOR3 Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">NOR3 Schematic (Microwind)</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/NOR3%20-%20Anan%20-%20Schematic.PNG" alt="NOR3 Schematic Cadence" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">NOR3 Schematic (Cadence)</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/Layout-%20NOR3.JPG" alt="NOR3 Layout" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">NOR3 Layout</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/DRC-NOR3.JPG" alt="NOR3 DRC" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">DRC Verification</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/LVS-%20NOR3.JPG" alt="NOR3 LVS" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">LVS Verification</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/NOR3%20-%20Anan%20-%20IOs.PNG" alt="NOR3 IOs" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">Input/Output Pins</p>
-                                </div>
-                                <div class="col-md-4 gallery-item">
-                                    <img src="vlsi-images/NOR3%20-%20Anan%20-%20Graphs.PNG" alt="NOR3 Graphs" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">Simulation Graphs</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- MUX Section -->
-                        <div class="gallery-section">
-                            <h3><i class="bi bi-cpu me-2"></i>Multiplexer (MUX)</h3>
+                            <h3><i class="bi bi-robot me-2"></i>Completed Robot</h3>
                             <div class="row">
                                 <div class="col-md-6 gallery-item">
-                                    <img src="vlsi-images/MUX%20-%20Transient%20Schematic.PNG" alt="MUX Transient Schematic" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">MUX Transient Schematic</p>
+                                    <img src="linefollower-images/placeholder-robot-1.jpg" alt="Robot Front View" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Front View</p>
                                 </div>
                                 <div class="col-md-6 gallery-item">
-                                    <img src="vlsi-images/MUX%20-%20Transient.PNG" alt="MUX Transient" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">MUX Transient Analysis</p>
+                                    <img src="linefollower-images/placeholder-robot-2.jpg" alt="Robot Side View" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Side View</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testing & Calibration Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-sliders me-2"></i>Testing & Calibration</h3>
+                            <div class="row">
+                                <div class="col-md-6 video-item">
+                                    <div class="video-container">
+                                        <!-- Replace VIDEO_ID_3 with actual YouTube video ID -->
+                                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="PID Tuning Test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="caption">PID Tuning Test</p>
+                                </div>
+                                <div class="col-md-6 gallery-item">
+                                    <img src="linefollower-images/placeholder-testing.jpg" alt="Track Testing" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Track Testing</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Competition Day Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-trophy me-2"></i>Competition Day</h3>
+                            <div class="row">
+                                <div class="col-md-4 gallery-item">
+                                    <img src="linefollower-images/placeholder-venue.jpg" alt="Competition Venue" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Competition Venue</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="linefollower-images/placeholder-team.jpg" alt="Team Photo" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Team Photo</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="linefollower-images/placeholder-certificate.jpg" alt="Certificate" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Finalist Certificate</p>
                                 </div>
                             </div>
                         </div>

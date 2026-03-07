@@ -1,0 +1,389 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{libertinus}
+
+% Define colors
+\definecolor{namecolor}{RGB}{65,105,225}  % Royal blue for name
+\definecolor{linkcolor}{RGB}{65,105,225}  % Blue for links
+
+% Configure hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Section formatting
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Custom commands
+\newcommand{\name}[1]{
+  {\Huge\color{namecolor}\textbf{#1}}
+}
+\newcommand{\nameblack}[1]{%
+  {\Huge\color{black}\textbf{#1}}%
+}
+
+
+\newcommand{\tagline}[1]{
+  \textit{#1}
+}
+
+\newcommand{\contactinfo}[2]{
+  \begin{flushright}
+    #1 \\
+    #2
+  \end{flushright}
+}
+
+% Custom list environments
+\setlist[itemize,1]{leftmargin=1em, label=\textbullet, itemsep=3pt, parsep=0pt, topsep=6pt}
+\setlist[itemize,2]{leftmargin=1em, label=\textbullet, itemsep=2pt, parsep=0pt, topsep=2pt}
+
+% Research Experience Format
+\newcommand{\researchexperienceitem}[3]{
+  %\item
+  \textbf{#1} \hfill {\footnotesize{#3}} \\
+  #2
+}
+% Work Experience Format
+\newcommand{\experienceitem}[3]{
+  %\item
+  \textbf{#1} {#2} \hfill {\footnotesize{#3}} 
+}
+% Skills Format
+\newcommand{\skillcategory}[1]{
+  \item
+  \textbf{#1}
+}
+
+% Simple item with optional sub-description
+\newcommand{\simpleitem}[2]{
+  \item
+  \textbf{#1} \\
+  #2
+}
+
+\begin{document}
+
+
+
+%-------------------------------------------------------------------
+% NAME HEADER SECTION
+%-------------------------------------------------------------------
+
+
+% Two-column layout for tagline and contact
+\noindent
+\begin{minipage}[t]{0.65\textwidth}
+  \name{Anan}
+\nameblack{Faiyaz Radin}
+
+
+  \vspace{0.3cm}
+  \tagline{{\textbf{Objective: }}A driven UoN MSc CS(AI) student with exceptional research and teaching acumen looking for graduate research opportunities in the areas of Robotics, Dynamical Control Systems, Computer Vision, Machine Learning \& Biomedical Engineering.}
+  \end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{0.15cm}
+  \raggedleft
+  {\footnotesize
+    Melton Hall, Jubilee Campus, UoN, Nottingham, NG8 1 BB \\
+    \href{mailto:psxar12@nottingham.ac.uk}{psxar12@nottingham.ac.uk}
+    \href{mailto:anan.radin@northsouth.edu}{anan.radin@northsouth.edu} \\
+    \href{https://www.linkedin.com/in/ananfaiyaz/}{LinkedIn} $\mid$
+    \href{https://github.com/xylomylo}{GitHub} $\mid$
+    \href{https://xylomylo.github.io}{Website} \\
+    +77572734410
+  }
+\end{minipage}
+
+\vspace{0.05cm}
+
+%-------------------------------------------------------------------
+% START OF MAIN CONTENT
+%-------------------------------------------------------------------
+%-------------------------------------------------------------------
+\section*{Education}
+
+\begin{itemize}
+  \item
+ \textbf{MSc in Computer Science (AI),}
+  \hspace{2.19cm}
+  \textbullet{} 2\textsuperscript{nd} Term (Ongoing)
+  \hfill {\footnotesize 2025 - Present} \\
+  {University of Nottingham, UK}
+  
+  \item 
+  \textbf{BSc in Electrical \& Electronic Engineering,} 
+  \hspace{0.06cm}
+  \textbullet{} CGPA: \textbf{3.53}/ 4.0 (Cum Laude) 
+  \hfill {\footnotesize 2019 - 2024} \\
+  {North South University, BD}
+  \hspace{3.37cm}
+  {Focus:} Robotics, VLSI Design
+  
+\end{itemize}
+%-------------------------------------------------------------------
+%-------------------------------------------------------------------
+\section*{Research Experience}
+
+  %\begin{itemize}
+  
+  \researchexperienceitem{{\href{https://www.canva.com/design/DAGHtj4JSEY/mIrDE-2Q_oaq9_5ZdW7QPQ/view?utm_content=DAGHtj4JSEY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0feed87812}{Quantum Mechanical Trapping of a Spinless Particle using Matterwaves}}}{Supervisor: {\href{https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en}{Dr. Mahdy Rahman Chowdhury}} (Research Training)}{2024 - 2025}
+  \begin{itemize}
+    \item Replicated {\href{https://www.sciencedirect.com/science/article/pii/S2405844023106578}{published results}} of previous work in COMSOL Multiphysics and Quantum Espresso; And, \\attempted a novel approach to quantum mechanical trapping of a spinless particle using matter waves.
+  \end{itemize}
+\researchexperienceitem{{\href{https://drive.google.com/file/d/1jmDFps1sxxSo2bpzIJzQsx7QF3koQ-rs/view}{Pose Estimation of Target Spacecraft from a 3U CubeSat with Deep Learning Methods}}}{Supervisor: {\href{https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ}{Dr. Shahnewaz Siddique}} ({\href{http://www.apsco.int}{APSCO}} Competition \& Undergraduate Thesis)}{2024}
+  \begin{itemize}
+    \item Derived mission parameters for stable pose estimation of target spacecraft in Low Earth Orbit, developed \\ an Attitude Determination \& Control System model in MATLAB for the said parameters.
+  \end{itemize}
+  
+%\end{itemize}
+
+%-------------------------------------------------------------------
+%-------------------------------------------------------------------
+\section*{Professional Experience}
+
+%\begin{itemize}
+  \experienceitem
+  {Emerging Leader, }
+  {{\href{https://emkcenter.org}{Edward M. Kennedy Center}}, {\href{https://bd.usembassy.gov/education/american-spaces/}{American Spaces Bangladesh}}}
+  {2025}
+  \begin{itemize}
+    \item Hosted hands-on robotics workshops in the EMK Makerlab for school, and university  \\students. Also, processed \& delivered 3D Printing projects using Prusa and SOLIDWORKS.
+  \end{itemize}
+  \experienceitem
+  {Research Assistant, }
+  {\href{https://ece.northsouth.edu}{Department of ECE}, \href{https://ece.northsouth.edu}{North South University}}
+  {2024 - 2025}
+  \begin{itemize}
+    \item Designed and implemented a Quaternion-based Linear Quadratic Regulated \\ attitude controller for a 3U CubeSat in MATLAB under {\href{https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ}{SNS1}}.
+  \end{itemize}
+  \experienceitem
+  {Teaching Assistant, }
+  {\href{https://ece.northsouth.edu}{Department of ECE}, \href{https://ece.northsouth.edu}{North South University}}
+  {2024 - 2024}
+  \begin{itemize}
+    \item  Evaluated student submissions, \& co-ordinated course instruction for \href{https://ece.northsouth.edu/courses/cse-413-verilog-hdl-modelling-simulation-and-synthesis/}{EEE413: Verilog HDL} \\under \href{https://ece.northsouth.edu/people/iqbalur-rokon/}{IQR} for a peer group of 40.
+  \end{itemize}
+  \experienceitem
+  {Instructor (Robotics), }
+  {\href{https://www.facebook.com/MindcraftLabs/about}{Mindcraft Labs}}
+  {2019-2020}
+  \begin{itemize}
+    \item Taught an introductory Arduino {\href{https://www.facebook.com/photo/?fbid=526359588210282&set=a.526359548210286}{robotics}} curriculum through practical, project-based sessions.
+  \end{itemize}
+  \experienceitem
+  {Student Intern (R\&D), }
+  {\href{https://bondstein.com}{Bondstein Technologies Ltd.}}
+  {2016 - 2019}
+  \begin{itemize}
+    \item Designed system process for a automated car parking project, PCB layout for Sensor Arrays,\\ \& CAD modeling for R\&D project housings.
+  \end{itemize}
+%\end{itemize}
+
+%-------------------------------------------------------------------
+
+%-------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------
+\section*{Technical Skills}
+
+\begin{itemize}
+
+\skillcategory{Programming/Dev} 
+    \textbullet{} LaTeX
+    \textbullet{} Python[2025]
+    \textbullet{} C++
+    \textbullet{} HTML/CSS [2025]
+    \textbullet{} PHP [2025]
+    \textbullet{} JavaScript [2025]
+    
+     
+    
+    \hspace{3.31cm}
+    \textbullet{} Github[2025]
+    \textbullet{} Verilog HDL
+    \textbullet{} Arduino
+    \textbullet{} MPLAB X IDE
+    \textbullet{} Assembly [Familiar]
+
+\skillcategory{Data Analytics}
+    \hspace{0.56cm} 
+    \textbullet{} MS Excel
+    \textbullet{} Tableau [2024]
+    \textbullet{} Pandas [2025]
+
+\skillcategory{Simulation Tools} 
+    \hspace{0.16cm}
+    \textbullet{} MATLAB
+    \textbullet{} Cadence
+    \textbullet{} COMSOL
+    \textbullet{} AutoCAD
+    \textbullet{} MULTISIM
+    \textbullet{} Solidworks
+    \textbullet{} EasyEDA 
+
+    \hspace{3.31cm}
+    \textbullet{} Xilinx
+    \textbullet{} Wolfram Mathematica
+    \textbullet{} Manim [Familiar]
+    \textbullet{} ROS [Familiar]
+
+\skillcategory{Graphics}
+    \hspace{1.54cm}
+    \textbullet{} Adobe Creative Suite (Illustrator, Photoshop, After Effects, Premiere Pro, XD)
+
+\skillcategory{Certifications}
+    \hspace{0.74cm}
+    \textbullet{} Stanford Short Data Science Course (MS Excel, SQL, AI, Tableau)
+\end{itemize}
+
+
+%-------------------------------------------------------------------
+
+%-------------------------------------------------------------------
+\section*{Standardized Tests}
+
+\begin{itemize}
+  \item 
+  \textbf{GRE} 
+  \hspace{6.67cm}
+  \textbullet{} Quant: \textbf{160} \textbullet{} Verbal: 149 \textbullet{} Analytic Writing: 4.0 \hfill {\footnotesize 2024}
+  \item 
+  \textbf{IELTS, }{IDP} 
+  \hspace{5.64cm} 
+  \textbullet{} Band Score: \textbf{8.0}/ 9 
+  \hfill 
+  {\footnotesize 2024}
+  \item 
+  \textbf{SAT,} {College Board} 
+  \hspace{4.38cm}
+  \textbullet{} Score: \textbf{1480}/ 1600 
+  \hspace{0cm}
+  \textbullet{} 98\textsuperscript{th} Percentile (99\textsuperscript{th} Nationally) \hfill {\footnotesize 2018}
+\end{itemize}
+
+%-------------------------------------------------------------------
+\section*{Achievements \& Awards}
+
+\begin{itemize}
+  \item 
+  \textbf{Finalist \& Representative Team for Bangladesh}, 
+  {\href{https://www.gtu.edu.tr/fileman/Files/UserFiles/malzeme/APSCO%20Cubesat%20Competition%20(ACC).pdf}
+  {APSCO CubeSAT Competition}} \hfill 
+  {\footnotesize{2024}}
+  
+  \item
+  \textbf{Champions} (Out of 23 Teams), {\href{https://www.facebook.com/photo?fbid=10159043579170768&set=a.10159043554910768}{Intra Masters of Ideation}} \hfill {\footnotesize{2021}}
+  
+  \item 
+  \textbf{Full Tuition Merit UG Scholarship} (\$35,000/year), School of Engineering, University of Arizona, USA
+  \hfill {\footnotesize{2019}}
+  
+  \item 
+  \textbf{Finalist} (Top 10), {\href{https://www.facebook.com/EngeniusAUST}{Engenius}} {Line Following Robotics Competition}, Ahasanullah University of Technology
+  \hfill {\footnotesize{2017}}
+  
+\end{itemize}
+
+%-------------------------------------------------------------------
+%
+%
+%-------------------------------------------------------------------
+
+\section*{Leadership Experience}
+
+%\begin{itemize}
+  \experienceitem{President (27\textsuperscript{th}),} {\href{https://yes.nsu.edu}{North South University Young Entrepreneurs Society! (NSU YES!}), \href{https://www.northsouth.edu}{NSU}}{2019-2023}
+  \begin{itemize}
+    \item As the 1\textsuperscript{st} STEM background appointee in the organization’s history, I led major structural, and \\operational improvements. I developed a new HR Tracker, organized the \href{https://www.facebook.com/nsuyes/posts/pfbid0Cz4s9KFdK4cYLLS63xdtPzXVaMHXp2vgtL33HcRQpHZCU4SdPToSLhppy9QP67Ngl}{Silver Jubilee} for 500+ alumni, \& \\led 7+ national-scale youth development \href{https://youtu.be/2ErYexnnDpw}{events}, and co-founded the creative platform \href{https://www.facebook.com/groups/675834216365001}{Make IT Happen} \\ and secured £20,000+ in sponsorship funding. Besides, I supervised, and trained  200+ members.
+  \end{itemize}
+  \experienceitem{Founding President,} {\href{https://www.facebook.com/events/312626249169334}{Rajuk College Robotics Club (RCRC)}, \href{https://rajukcollege.edu.bd}{RUMC}}{2015-2019}
+  \begin{itemize}
+    \item Founded the 1\textsuperscript{st} school robotics club in Bangladesh, now known as \href{https://www.facebook.com/rajuk.ric}{RC-RIC}. Over 4 years, served as \\moderator and instructor to 400+ students. Designed and executed a 3-year plan 2 inter-school \href{https://www.facebook.com/events/312626249169334}{workshops} \\ \& 8+ \href{https://youtu.be/7elBWGB8Poc}{national competitions} to normalize robotics across Bangladeshi schools.
+  \end{itemize}
+%\end{itemize}
+
+%-------------------------------------------------------------------
+
+%-------------------------------------------------------------------
+\section*{Academic \& Co-curricular Projects}
+
+  %  \begin{itemize}
+\researchexperienceitem{{\href{https://drive.google.com/file/d/1riy1vmYbKUP7uW6G0pHn2b062nwcWHVF/view?usp=sharing}{A Technical Introduction to Quantum Computing }}}{Supervisor: {\href{https://scholar.google.com/citations?hl=en&user=2HYoslMAAAAJ}{Dr. Gail Hopkins}} (Systems \& Networks Coursework)}{2025}
+  \begin{itemize}
+    \item Presented the mathematical foundations and core principles of quantum computing,  using LaTeX and \\Manim to support precise visualization and communication.
+    \end{itemize}
+\researchexperienceitem
+  {\href{https://drive.google.com/file/d/1H5tbD_JmRvl__UqDHD4sPWXwMc_bIxhD/view?usp=sharing}{Attitude Determination of a Spacecraft using Simple Kalman Filtering in MATLAB}}
+  {Supervisor: \href{https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ}{Dr. Shahnewaz Siddique} (Robotics \& Numerical Methods)}
+  {2024}
+  \begin{itemize}
+    \item Designed and implemented a MATLAB simulation for Detumbling \& Nominal Modes with sensor fusion, \\analyzed \& compared pre-filter \& post-filter state readings to evaluate system performance.
+  \end{itemize}
+\researchexperienceitem{\href{https://drive.google.com/drive/folders/1z_m9oPKGY4GZCL-_jfyNqZMk-NUp1QEf}{Verilog HDL Implementation of Conjugate Logic Circuits in Cadence, Xilinx \& ModelSim}}
+  {Supervisor: \href{https://ece.northsouth.edu/people/iqbalur-rokon/}{Mr. Iqbalur Rahman Rokon} (Introduction to VLSI, Verilog HDL Modelling)}{2023-2024}
+  \begin{itemize}
+    \item Designed and implemented multiple logic circuits, performing DC and transient analysis on the layouts \\to ensure accurate functionality and performance.
+  \end{itemize}
+\researchexperienceitem{{\href{https://drive.google.com/file/d/1cp2u4pVswKNNHZNCnw1QEQHbvuv3dpvr/view}{Heartbeat Monitor Design \& Implementation using PIC Microcontroller}}}{Supervisor: {\href{https://ece.northsouth.edu/people/dr-sakhawat-hussain/}{Dr. Shakhawat Hossain}} (Embedded Systems \& Hardware Interface)}{2023}
+  \begin{itemize}
+    \item Designed and implemented a heartbeat monitor(physical \& simulation) based on peak detection of \\Photoplethysmography signals using a PIC-Microcontroller with hardware-in the-loop.
+  \end{itemize}
+\researchexperienceitem{\href{https://drive.google.com/drive/folders/1uNBSVZH2_dy0_Oq0cVGIfgUmEq9-XBOY}{PID-Controlled Quadcopter} \& \href{https://drive.google.com/drive/folders/1gryL8Wh1tVB2gNVJjn_W8aFoTBzCbPA8?usp=sharing}{Line Following Robot} using Arduino}{Personal \& Team Projects for Competitions}{2014 - 2020}
+  \begin{itemize}
+    \item Built quadcopter and robots (multiple iterations), designed and implemented \href{https://oshwlab.com/anan.faiyaz/Atmega2560}{physical circuits} \& PID \\controllers, using sensor fusion and gain value optimization in MATLAB.
+  \end{itemize}
+%\end{itemize}
+%-------------------------------------------------------------------
+%-------------------------------------------------------------------
+\section*{Reference}
+
+\hspace{0.01cm}
+\textbullet{}
+\hspace{0.01cm}
+\begin{minipage}[t]{0.45\textwidth}
+   \textbf{\href{https://emkcenter.org}{Swarupa Haque}} \\
+  Project Lead, EMK, American Spaces Bangladesh \\
+  Contact: +8801777742120 \\
+  Email: \href{mailto:swarupa.haque@emkcenter.org}{swarupa.haque@emkcenter.org}
+\end{minipage}
+\hspace{0.4cm}
+\textbullet{}
+\hspace{0.01cm}
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{\href{https://scholar.google.com/citations?user=6XLqr5QAAAAJ&hl=en}{Dr. Shahnewaz Siddique}} \\
+  Associate Professor, North South University \\
+  Contact: +880255668200 Ext -- 1515 \\
+  Email: \href{mailto:shahnewaz.siddique@northsouth.edu}{shahnewaz.siddique@northsouth.edu}
+\end{minipage}
+
+
+%-------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------
+
+\end{document}

@@ -11,9 +11,9 @@
         </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Bangla Texting on Smartphones Research - Anan Faiyaz Radin">
+        <meta name="description" content="Quadcopter Project - Design, Build and Flight Testing - Anan Faiyaz Radin">
         <meta name="author" content="Anan Faiyaz Radin">
-        <title>Bangla Texting on Smartphones | Anan Faiyaz Radin</title>
+        <title>Quadcopter Project | Anan Faiyaz Radin</title>
         <link rel="icon" href="../images/favicon.png" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,6 +43,10 @@
             .gallery-item img:hover { transform: scale(1.02); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
             .gallery-item .caption { font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center; }
             .modal-img { max-width: 100%; max-height: 85vh; }
+            .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 1rem; }
+            .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+            .video-item { margin-bottom: 1.5rem; }
+            .video-item .caption { font-size: 0.85rem; color: #6c757d; margin-top: 0.5rem; text-align: center; }
         </style>
     </head>
     <body>
@@ -53,8 +57,8 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="../research.html">Research</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../projects.html">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../research.html">Research</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="../projects.html">Projects</a></li>
                             <li class="nav-item"><a class="nav-link" href="../experience.html">Experience</a></li>
                             <li class="nav-item"><a class="nav-link" href="../skills.html">Skills</a></li>
                             <li class="nav-item"><a class="nav-link" href="../cv.html">CV</a></li>
@@ -69,39 +73,86 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <a href="../research.html" class="back-btn mb-4 d-inline-block"><i class="bi bi-arrow-left me-2"></i>Back to Research</a>
-                        <h1 class="section-title">Bangla Texting on Smartphones</h1>
+                        <a href="../projects.html" class="back-btn mb-4 d-inline-block"><i class="bi bi-arrow-left me-2"></i>Back to Projects</a>
+                        <h1 class="section-title">Quadcopter Project</h1>
                         <p class="project-meta">
-                            <strong>Year:</strong> 2024-2025 · <strong>Co-Authors:</strong> Most. Rumana Aktar, <a href="https://scholar.google.com/citations?user=PxNOguMAAAAJ&hl=en" target="_blank">Dr. Mahdy Rahman Chowdhury</a>
+                            <strong>Type:</strong> Personal Project · <strong>Year:</strong> 2020 · <strong>Category:</strong> Robotics & UAV
                         </p>
                         <div class="project-description">
-                            <p>This research explores the challenges faced by users of Bangla keyboards on smartphones. Through qualitative data collection and analysis, we identified key pain points and user suggestions for improvement.</p>
-                            <p>The qualitative data was salvaged point to point, then categorized to derive quantitative insights. Pivot tables and graphs were generated to extract relevant key findings about user challenges and suggested improvements.</p>
-                            <p><strong>Key Topics:</strong> Human-Computer Interaction, Bangla Language Input, Mobile Keyboards, User Experience Research</p>
+                            <p>Design and construction of a custom quadcopter drone, including frame design, flight controller programming, motor selection, and flight testing. This project demonstrates practical understanding of aerodynamics, control systems, and embedded programming.</p>
+                            <p><strong>Key Components:</strong> Flight Controller, ESCs, Brushless Motors, LiPo Battery, Radio Transmitter/Receiver</p>
                         </div>
 
-                        <!-- Research Findings Section -->
+                        <!-- Flight Videos Section -->
                         <div class="gallery-section">
-                            <h3><i class="bi bi-bar-chart me-2"></i>Research Findings</h3>
+                            <h3><i class="bi bi-camera-video me-2"></i>Flight Videos</h3>
                             <div class="row">
-                                <div class="col-md-12 gallery-item">
-                                    <img src="BT3.png" alt="Most Frequently Reported Challenges and Suggested Improvements" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">Most Frequently Reported Challenges and Suggested Improvements</p>
+                                <div class="col-md-6 video-item">
+                                    <div class="video-container">
+                                        <!-- Replace VIDEO_ID_1 with actual YouTube video ID -->
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lBN5CNe9H-g?si=3okF0TBq1qdrIATQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="caption">First Flight Test</p>
+                                </div>
+                                <div class="col-md-6 video-item">
+                                    <div class="video-container">
+                                        <!-- Replace VIDEO_ID_2 with actual YouTube video ID -->
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xg5fAsEhM7U?si=dxALlk1prdca2Pl5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="caption">Outdoor Flight Demo</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Data Collection Section -->
+                        <!-- Build Process Section -->
                         <div class="gallery-section">
-                            <h3><i class="bi bi-table me-2"></i>Data Collection & Analysis</h3>
+                            <h3><i class="bi bi-tools me-2"></i>Build Process</h3>
+                            <div class="row">
+                                <div class="col-md-4 gallery-item">
+                                    <!-- Replace with actual image path -->
+                                    <img src="quadcopter-images/placeholder-frame.jpg" alt="Frame Assembly" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Frame Assembly</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="quadcopter-images/placeholder-motors.jpg" alt="Motor Installation" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Motor Installation</p>
+                                </div>
+                                <div class="col-md-4 gallery-item">
+                                    <img src="quadcopter-images/placeholder-electronics.jpg" alt="Electronics Wiring" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Electronics Wiring</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Completed Build Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-check-circle me-2"></i>Completed Build</h3>
                             <div class="row">
                                 <div class="col-md-6 gallery-item">
-                                    <img src="BT1.png" alt="Raw Survey Data" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">Raw Survey Data Collection</p>
+                                    <img src="quadcopter-images/placeholder-complete-1.jpg" alt="Quadcopter Front View" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Front View</p>
                                 </div>
                                 <div class="col-md-6 gallery-item">
-                                    <img src="BT2.png" alt="Quantized Data Analysis" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
-                                    <p class="caption">Quantized Data for Analysis</p>
+                                    <img src="quadcopter-images/placeholder-complete-2.jpg" alt="Quadcopter Top View" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Top View</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flight Controller Configuration Section -->
+                        <div class="gallery-section">
+                            <h3><i class="bi bi-gear me-2"></i>Flight Controller Configuration</h3>
+                            <div class="row">
+                                <div class="col-md-6 video-item">
+                                    <div class="video-container">
+                                        <!-- Replace VIDEO_ID_3 with actual YouTube video ID -->
+                                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="PID Tuning Process" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="caption">PID Tuning Process</p>
+                                </div>
+                                <div class="col-md-6 gallery-item">
+                                    <img src="quadcopter-images/placeholder-fc-setup.jpg" alt="Flight Controller Setup" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+                                    <p class="caption">Flight Controller Setup</p>
                                 </div>
                             </div>
                         </div>
