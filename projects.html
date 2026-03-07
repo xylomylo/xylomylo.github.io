@@ -24,6 +24,7 @@
             body { background-color: #fff; }
             .site-header { background-color: #f8f9fa; border-bottom: 1px solid #e9ecef; padding: 1rem 0; }
             .site-header .navbar-brand { font-size: 1.5rem; font-weight: 700; color: #212529; }
+            .site-header .navbar-brand .text-primary { color: #0d6efd !important; }
             .site-header .nav-link { color: #495057; font-weight: 500; padding: 0.5rem 1rem; }
             .site-header .nav-link:hover, .site-header .nav-link.active { color: #0d6efd; }
             .profile-sidebar { position: sticky; top: 2rem; }
@@ -70,7 +71,7 @@
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
-                    <a href="index.html" class="navbar-brand">Anan Faiyaz Radin</a>
+                    <a href="index.html" class="navbar-brand"><span class="text-primary">Anan</span> Faiyaz Radin</a>
                 </nav>
             </div>
         </header>
@@ -101,6 +102,9 @@
                         <ul class="nav nav-tabs" id="projectTabs" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="robotics-tab" data-bs-toggle="tab" data-bs-target="#robotics" type="button" role="tab" aria-controls="robotics" aria-selected="true">Robotics</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="cs-tab" data-bs-toggle="tab" data-bs-target="#cs" type="button" role="tab" aria-controls="cs" aria-selected="false">Programming</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="embedded-tab" data-bs-toggle="tab" data-bs-target="#embedded" type="button" role="tab" aria-controls="embedded" aria-selected="false">Embedded Systems</button>
@@ -134,7 +138,21 @@
                                     <a href="projects/linefollower.html" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-folder me-1"></i>View Project Files</a>
                                 </div>
                             </div>
-
+                            <!-- Computer Science -->
+                            <div class="tab-pane fade" id="cs" role="tabpanel" aria-labelledby="cs-tab">
+                                <div class="project-item">
+                                    <h4>Notty: A Custom Turn Based Card Game for 4 Players based on Python</h4>
+                                    <p class="meta">2025 - COMP40XX: Programming - Supervisor: <a href="" target="_blank">Daniel Karp., Colin Johnson</a></p>
+                                    <p>TBU</p>
+                                    <a href="" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                                <div class="project-item">
+                                    <h4>NHS Hospital Management Software</h4>
+                                    <p class="meta">2025 - COMP40XX: Databases, Systems & Interfaces: <a href="" target="_blank">Nazia Hameed</a></p>
+                                    <p>TBU</p>
+                                    <a href="" target="_blank" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
+                                </div>
+                            </div>
                             <!-- Control Systems Tab -->
                             <div class="tab-pane fade" id="control" role="tabpanel" aria-labelledby="control-tab">
                                 <div class="project-item">
@@ -200,7 +218,7 @@
                                     <a href="projects/eee332-pulse-oximeter.html" class="btn btn-outline-primary btn-sm"><i class="bi bi-file-pdf me-1"></i>View Report</a>
                                 </div>
                             </div>
-
+                            
                             
                         </div>
                         

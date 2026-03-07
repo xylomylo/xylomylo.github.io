@@ -24,6 +24,7 @@
             body { background-color: #fff; }
             .site-header { background-color: #f8f9fa; border-bottom: 1px solid #e9ecef; padding: 1rem 0; }
             .site-header .navbar-brand { font-size: 1.5rem; font-weight: 700; color: #212529; }
+            .site-header .navbar-brand .text-primary { color: #0d6efd !important; }
             .site-header .nav-link { color: #495057; font-weight: 500; padding: 0.5rem 1rem; }
             .site-header .nav-link:hover, .site-header .nav-link.active { color: #0d6efd; }
             .profile-sidebar { position: sticky; top: 2rem; }
@@ -75,7 +76,7 @@
                             <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                         </ul>
                     </div>
-                    <a href="index.html" class="navbar-brand">Anan Faiyaz Radin</a>
+                    <a href="index.html" class="navbar-brand"><span class="text-primary">Anan</span> Faiyaz Radin</a>
                 </nav>
             </div>
         </header>
@@ -104,33 +105,38 @@
                     <div class="col-lg-9 col-md-8">
                         <section class="mb-5">
                             <h2 class="section-title">Contact Information</h2>
-                            <div class="contact-item">
-                                <h4><i class="bi-envelope me-2 text-primary"></i>Email</h4>
-                                <p><a href="mailto:psxar12@nottingham.ac.uk">psxar12@nottingham.ac.uk</a> <small class="text-muted">(University)</small></p>
-                                <p><a href="mailto:ananfaiyazradin@gmail.com">ananfaiyazradin@gmail.com</a> <small class="text-muted">(Personal)</small></p>
-                            </div>
-                            <div class="contact-item">
-                                <h4><i class="bi-geo-alt me-2 text-primary"></i>Location</h4>
-                                <p>Nottingham, United Kingdom</p>
-                            </div>
-                            <div class="contact-item">
-                                <h4><i class="bi-building me-2 text-primary"></i>Affiliation</h4>
-                                <p><a href="https://www.nottingham.ac.uk/computerscience/" target="_blank">School of Computer Science</a></p>
-                                <p>University of Nottingham</p>
-                            </div>
-                        </section>
-                        <section class="mb-5">
-                            <h2 class="section-title">Connect Online</h2>
-                            <div class="contact-item">
-                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" class="social-btn"><i class="bi-linkedin me-2"></i>LinkedIn</a>
-                                <a href="https://github.com/xylomylo" target="_blank" class="social-btn"><i class="bi-github me-2"></i>GitHub</a>
-                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" class="social-btn"><i class="bi-journal-text me-2"></i>ResearchGate</a>
-                                <!--a href="https://orcid.org/0009-0003-8339-7838" target="_blank" class="social-btn"><i class="bi-person-badge me-2"></i>ORCID</a-->
-                                <a href="https://www.youtube.com/@ananfaiyaz/videos" target="_blank" class="social-btn"><i class="bi-youtube me-2"></i>YouTube</a>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="contact-item h-100">
+                                        <h4><i class="bi-envelope me-2 text-primary"></i>Email</h4>
+                                        <p><a href="mailto:psxar12@nottingham.ac.uk">psxar12@nottingham.ac.uk</a> <small class="text-muted">(University)</small></p>
+                                        <p><a href="mailto:ananfaiyazradin@gmail.com">ananfaiyazradin@gmail.com</a> <small class="text-muted">(Personal)</small></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="contact-item h-100">
+                                        <h4><i class="bi-geo-alt me-2 text-primary"></i>Location</h4>
+                                        <p>Nottingham, United Kingdom</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="contact-item h-100">
+                                        <h4><i class="bi-building me-2 text-primary"></i>Affiliation</h4>
+                                        <p><a href="https://www.nottingham.ac.uk/computerscience/" target="_blank">School of Computer Science</a></p>
+                                        <p>University of Nottingham</p>
+                                    </div>
+                                </div>
                             </div>
                         </section>
+                        
                         <section class="mb-5">
                             <h2 class="section-title">References</h2>
+                            <div class="ref-item">
+                                <h4>TBD</h4>
+                                <p class="role"><strong>TBD</strong></p>
+                                <p class="meta">TBD</p>
+                                <p><i class="bi-envelope me-2"></i><a href="mailto:">TBD</a></p>
+                            </div>
                             <div class="ref-item">
                                 <h4>Swarupa Haque</h4>
                                 <p class="role"><strong>Program Officer</strong></p>
@@ -143,6 +149,16 @@
                                 <p class="meta">Department of Electrical & Computer Engineering · North South University, Dhaka</p>
                                 <p><i class="bi-envelope me-2"></i><a href="mailto:shahnewaz.siddique@northsouth.edu">shahnewaz.siddique@northsouth.edu</a></p>
                                 <p><i class="bi-google me-2"></i><a href="https://scholar.google.com/citations?hl=en&user=6XLqr5QAAAAJ" target="_blank">Google Scholar</a></p>
+                            </div>
+                        </section>
+                        <section class="mb-5">
+                            <h2 class="section-title">Connect Online</h2>
+                            <div class="contact-item">
+                                <a href="https://www.linkedin.com/in/ananfaiyaz/" target="_blank" class="social-btn"><i class="bi-linkedin me-2"></i>LinkedIn</a>
+                                <a href="https://github.com/xylomylo" target="_blank" class="social-btn"><i class="bi-github me-2"></i>GitHub</a>
+                                <a href="https://www.researchgate.net/profile/Anan-Radin" target="_blank" class="social-btn"><i class="bi-journal-text me-2"></i>ResearchGate</a>
+                                <!--a href="https://orcid.org/0009-0003-8339-7838" target="_blank" class="social-btn"><i class="bi-person-badge me-2"></i>ORCID</a-->
+                                <a href="https://www.youtube.com/@ananfaiyaz/videos" target="_blank" class="social-btn"><i class="bi-youtube me-2"></i>YouTube</a>
                             </div>
                         </section>
                     </div>
